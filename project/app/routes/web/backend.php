@@ -1,0 +1,32 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\Index\Index_Controller as Backend_Index_Index_Controller;
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::prefix('')
+//     ->middleware([
+//         // '',
+//     ])->group(function () {
+//     Route::get('/deal', function () {
+//         $front_end_index_controller = new Frontend_Index_Index_Controller();
+//         $front_end_index_controller->Index();
+        
+//         echo "全部產生完成";
+//     });
+//     // -----------------------------------------------------
+
+// });
+
+Route::prefix('backend')
+    ->middleware([
+        // '',
+    ])->group(function () {
+    Route::get('/', [Backend_Index_Index_Controller::class, "Index"]);
+
+    // -----------------------------------------------------
+
+});

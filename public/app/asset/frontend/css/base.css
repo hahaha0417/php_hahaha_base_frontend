@@ -1,0 +1,241 @@
+/* 基本字型 */
+#asus-header * {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
+                 "PingFang TC", "Microsoft JhengHei", sans-serif;
+}
+
+/* 上層 Topbar */
+.asus-topbar {
+    height: 40px;
+    background: #f7f7f7;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 13px;
+}
+.asus-top-btn {
+    color: #181818;
+    text-decoration: none;
+}
+.asus-top-btn:hover { color:#006ce1; }
+
+.asus-top-logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+.asus-top-logo img { height: 20px; }
+.asus-top-logo .hover-img {
+    position:absolute; inset:0;
+    opacity:0; transition:.15s;
+}
+.asus-top-logo:hover .hover-img { opacity:1; }
+
+/* Logo */
+.asus-main-logo {
+    display:flex;
+    align-items:center;
+    height:26px;
+}
+.asus-logo-text {
+    width:72px; height:20px;
+    background-image:url("https://www.asus.com/media/Odin/images/header/ASUS_normal.svg");
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+.asus-logo-text:hover {
+    background-image:url("https://www.asus.com/media/Odin/images/header/ASUS_hover.svg");
+}
+
+/* Navbar */
+.asus-navbar {
+    border-bottom:1px solid #666666;
+}
+.asus-main-nav .nav-link {
+    padding:0.75rem 0.8rem;
+    font-size:14px;
+    color:#eeeeee !important;
+    border-bottom:2px solid transparent;
+}
+.asus-main-nav .nav-link:hover {
+    color:#006ce1 !important;
+    border-bottom-color:#006ce1;
+}
+
+/* Mega menu 基本 */
+.dropdown-mega .dropdown-menu {
+    width:100%;
+    left:0;
+    right:0;
+    border-radius:0;
+    border:none;
+    box-shadow:0 8px 24px rgba(0,0,0,.15);
+    margin-top:0;
+    background-color: #666;
+    color: #eeeeee
+}
+.asus-megamenu .row > [class^="col-"] {
+    border-right:1px solid #eee;
+}
+.asus-megamenu .row > [class^="col-"]:last-child {
+    border-right:none;
+}
+
+.asus-menu-title {
+    font-size:13px;
+    font-weight:600;
+    color:#666;
+    margin-bottom:.5rem;
+    text-transform:uppercase;
+}
+.asus-menu-item {
+    display:block;
+    padding:.2rem 0;
+    font-size:14px;
+    color:#eeeeee;
+    text-decoration:none;
+}
+.asus-menu-item:hover {
+    color:#006ce1;
+}
+
+/* 右側商品 */
+.asus-menu-product img {
+    width:100%;
+    border-radius:4px;
+}
+.asus-menu-product-title {
+    font-size:13px;
+    font-weight:600;
+    margin-top:.4rem;
+    line-height:1.4;
+}
+
+/* 搜尋列 */
+.asus-search-bar {
+    display:none;
+    background:#fff;
+    border-bottom:1px solid #e0e0e0;
+}
+.asus-search-btn {
+    background:#006ce1;
+    color:#fff;
+}
+
+/* Icon 按鈕 */
+.asus-icon-btn {
+    border:0;
+    background:transparent;
+    font-size:18px;
+    color:#181818;
+}
+.asus-icon-btn:hover { color:#006ce1; }
+
+/* Desktop hover 行為 */
+@media (min-width: 992px) {
+    .dropdown-mega:hover > .dropdown-menu {
+        display:block;
+    }
+}
+
+/* 手機 Offcanvas */
+.asus-offcanvas { width:280px; }
+.asus-mobile-menu {
+    font-size:14px;
+}
+.asus-mobile-item {
+    border-bottom:1px solid #eee;
+    padding:0.25rem 0;
+}
+
+/* Level 1 按鈕 */
+.asus-mobile-toggle {
+    width:100%;
+    background:none;
+    border:0;
+    text-align:left;
+    padding:0.5rem 0;
+    font-size:15px;
+    position:relative;
+}
+.asus-mobile-toggle .arrow {
+    position:absolute;
+    right:0; top:50%;
+    width:10px; height:10px;
+    border-right:2px solid #333;
+    border-bottom:2px solid #333;
+    transform:translateY(-50%) rotate(45deg);
+    transition:.2s;
+}
+.asus-mobile-toggle[aria-expanded="true"] .arrow {
+    transform:translateY(-50%) rotate(135deg);
+}
+
+/* Level 2 */
+.asus-mobile-subitem {
+    padding-left:1rem;
+}
+.asus-mobile-toggle2 {
+    width:100%;
+    background:none;
+    border:0;
+    text-align:left;
+    padding:0.35rem 0;
+    font-size:14px;
+    position:relative;
+}
+.asus-mobile-toggle2 .arrow {
+    position:absolute;
+    right:0; top:50%;
+    width:10px; height:10px;
+    border-right:2px solid #444;
+    border-bottom:2px solid #444;
+    transform:translateY(-50%) rotate(45deg);
+    transition:.2s;
+}
+.asus-mobile-toggle2[aria-expanded="true"] .arrow {
+    transform:translateY(-50%) rotate(135deg);
+}
+
+/* Level 3 link */
+.asus-mobile-link {
+    display:block;
+    padding:0.3rem 0 0.3rem 1.8rem;
+    font-size:13px;
+    color:#181818 !important;
+    text-decoration:none;
+}
+.asus-mobile-link:hover { color:#006ce1 !important; }
+
+/* 防止展開後字消失（你的問題） */
+.asus-mobile-menu .collapse.show,
+.asus-mobile-menu .collapse.show * {
+    color:#181818 !important;
+    opacity:1 !important;
+    visibility:visible !important;
+}
+
+.asus-footer a {
+    color: #666;
+    text-decoration: none;
+}
+.asus-footer a:hover {
+    color: #999;
+}
+
+.footer-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #333;
+}
+
+@media (min-width: 768px) {
+    .footer-title {
+        cursor: default;
+        border: none;
+    }
+    .footer-title i {
+        display: none !important;
+    }
+}
+
