@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <div class="layout">
+    <div class="layout mb-5">
         <?php \hahaha\view\component\backend\sidebar::instance()->view(); ?>
 
         <div class="content">

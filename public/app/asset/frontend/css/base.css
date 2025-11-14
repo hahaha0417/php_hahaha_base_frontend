@@ -1,3 +1,5 @@
+
+
 /* 基本字型 */
 #hahaha-header * {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
@@ -225,6 +227,13 @@
     color: #fff;
 }
 
+.hahaha-footer .container {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 98%;
+    max-width: 98%;
+}
+
 .footer-title {
     font-size: 1.1rem;
     font-weight: 600;
@@ -274,3 +283,62 @@
     color: #ffffff;
 }
 
+.overview-section {
+    background: #f8f9fa;
+}
+
+.overview-content h2 {
+    font-size: 32px;
+    line-height: 1.4;
+}
+
+.features-list li span {
+    font-size: 17px;
+}
+
+.features-list li span::before {
+    content: "•";
+    color: #0d6efd;
+    margin-right: 8px;
+}
+
+.features-list a span.active {
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+/* 去掉藍色圓點 */
+.features-list {
+    padding-left: 0;
+}
+
+.features-list li {
+    list-style: none;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    color: #ddd;
+    transition: all .25s ease;
+}
+
+/* 滑過特效：向右移動 + 顏色變亮 + 透明度提升 */
+.features-list li:hover {
+    transform: translateX(6px);
+    color: #fff;
+    opacity: 1;
+}
+
+/* 勾勾符號樣式 */
+.features-list li span::before {
+    content: "✓";
+    margin-right: 8px;
+    color: #4dabff;  /* 勾勾顏色 */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* 點我了解更多 */
+.features-list a .active {
+    font-weight: bold;
+}

@@ -179,12 +179,42 @@
 
         
         <!-- Hero -->
-            <main>
-        <section class="bg-gradient-to-br from-indigo-50 to-white dark:from-slate-800 dark:to-slate-900">
-            <header style="width:100%; height:650px; overflow:hidden;">
-                <img src="image/av/圖.png" alt="Header" style="width:100%; object-fit:contain; background-color:#000;">
+            <style>
+        .header-wrap {
+            position: relative;     /* 讓子元素可以使用絕對定位 */
+            width: 100%;
+        }
 
-            </header>
+        .header-img {
+            width: 100%;
+            object-fit: contain;
+            background-color: #000;
+        }
+
+        /* 第二張圖固定位置 */
+        .overlay-img {
+            position: absolute;
+            width: 40%;     /* 你之前要求的大小 */
+            height: auto;     /* 等比例 */
+            
+            left: 55%;        /* 依需要調整位置 */
+            top: 83%;         /* 依需要調整位置 */
+
+            transform: translate(-50%, -50%); /* 使圖片中心點定位在中心 */
+            pointer-events: none; /* 可選：讓點擊不影響底層圖片 */
+        }
+
+    </style>
+    <main>
+        <section class="bg-gradient-to-br from-indigo-50 to-white dark:from-slate-800 dark:to-slate-900">
+            
+            <div class="header-wrap">
+                <img src="image/av/圖.png" alt="Header" class="header-img">
+
+                <!-- 疊在上面的圖片 -->
+                <img src="image/hahaha黑金.png" alt="image 4" class="overlay-img">
+            </div>
+               
             <div class="carousel">
                 <div class="slides">
                     <div class="slide"><img src="image/av/冬月楓.jpg" alt="image 3"></div>
@@ -223,6 +253,50 @@
                 }, 4000);
             </script>
         </section>
+        <section class="overview-section py-5 bg-dark text-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    
+                    <!-- 左圖 -->
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="overview-image">
+                            <img src="image/php.jpg" style="width:100%;height:auto;" class="img-fluid rounded" alt="服務項目">
+                        </div>
+                    </div>
+
+                    <!-- 右文字 -->
+                    <div class="col-lg-6">
+                        <div class="overview-content">
+                            <h2 class="fw-bold mb-3">
+                                hahaha官網<br>hello hahaha
+                            </h2>
+
+                            <p class="text-muted mb-4">
+                                無論是系統整合、APP開發等的問題，我們對流程皆相當熟知。
+                                透過客製化的方式，協助您完成恰到好處的數位升級服務，
+                                是您最值得信賴的夥伴！
+                            </p>
+
+                            <!-- 特色列表 -->
+                            <ul class="list-unstyled features-list">
+                                <li class="mb-2"><span>C++</span></li>
+                                <li class="mb-2"><span>PHP</span></li>
+                                <li class="mb-2"><span>C#</span></li>
+                                <li class="mb-2"><span>ASP.NET MVC Core</span></li>
+                                <li class="mb-2"><span>HTML</span></li>
+                                <li class="mt-3">
+                                    <a href="/" class="btn btn-dark px-4">
+                                        選我選我~~~~~~ \ ^ O ^ /
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
         <!-- Features -->
         <section id="features" class="features-section">
             <h2 class="section-title">hahaha</h2>
@@ -230,17 +304,23 @@
             <div class="features-container">
 
                 <div class="feature-box">
-                    <h3>🎨 UI 設計</h3>
+                    <h3>UI 設計</h3>
+                    <p>Win form</p>
+                    <p>Web form</p>
                     <p>\ ^ O ^ /</p>
                 </div>
 
                 <div class="feature-box">
-                    <h3>⚙️ 系統開發</h3>
+                    <h3>系統開發</h3>
+                    <p>hahahalib(c++，php，c#，asp.net)</p>
+                    <p>後端套版</p>
+                    <p>前端產生</p>
                     <p>O .O</p>
                 </div>
 
                 <div class="feature-box">
-                    <h3>🚀 專案整合</h3>
+                    <h3>專案整合</h3>
+                    <p>h_from</p>
                     <p>^ O &lt;</p>
                 </div>
 
