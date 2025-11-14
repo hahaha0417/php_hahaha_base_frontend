@@ -120,9 +120,9 @@ class layout
 
 
 
-        echo $hahaha_function_base->Js($hahaha_function_base->Url_Asset('backend/js/base.js'));
-        echo $hahaha_function_base->Js($hahaha_function_base->Url_Asset('backend/js/custom.js'));
-        echo $hahaha_function_base->Js($hahaha_function_base->Url_Asset('backend/js/hahaha.js'));
+        echo $hahaha_function_base->Js($hahaha_function_base->Url_Asset('frontend/js/base.js'));
+        echo $hahaha_function_base->Js($hahaha_function_base->Url_Asset('frontend/js/custom.js'));
+        echo $hahaha_function_base->Js($hahaha_function_base->Url_Asset('frontend/js/hahaha.js'));
 
         // echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('font-awesome\js\font-awesome.js'));
     }

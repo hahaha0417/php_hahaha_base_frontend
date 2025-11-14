@@ -18,10 +18,6 @@
         <script type="text/javascript" src="/asset/plugin//jquery/dist/jquery.js?v=1.0.0"></script>
 <script type="text/javascript" src="/asset/plugin//bootstrap/dist/js/bootstrap.bundle.js?v=1.0.0"></script>
 <script type="text/javascript" src="/asset/plugin//sweetalert2/dist/sweetalert2.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/plugin//datatables.net/js/jquery.dataTables.min.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/plugin//datatables.net-bs5/js/dataTables.bootstrap5.min.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/plugin//datatables.net-responsive/js/dataTables.responsive.min.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/plugin//datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js?v=1.0.0"></script>
     </head>
     <body class="bg-dark text-light">
         <!-- hahaha FULL HEADER -->
@@ -375,43 +371,110 @@
             }
         </style>
 
+        <div class="container py-5">
 
+            <div class="row align-items-center g-3 ">
+
+                <h3 class="ms-2">Q & A</h3>
+
+        
+
+            </div>
+
+            <!-- Q1 -->
+            <div class="question-item">
+                <div class="question-header">
+                    <div class="d-flex align-items-center">
+                        <span class="question-badge">Q1</span>
+                        <span class="question-title">提供接案服務嗎?</span>
+                    </div>
+                    <span class="question-icon">&gt;</span>
+                </div>
+                <div class="question-body">
+                    確定做得出來可以
+                </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="question-item">
+                <div class="question-header">
+                    <div class="d-flex align-items-center">
+                        <span class="question-badge">Q2</span>
+                        <span class="question-title">接案位置在哪</span>
+                    </div>
+                    <span class="question-icon">&gt;</span>
+                </div>
+                <div class="question-body">
+                    桃園
+                </div>
+            </div>
+
+           
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js"></script>
+        <div class="container py-5">
+            <h1 class="text-center mb-4">
+                hahaha
+            </h1>
+            <h3 class="text-center mb-4">
+                命名規則
+            </h3>
+            
+
+            <div class="row text-center">
+                <div class="col-4">
+                    <div class="counter-box p-4">
+                        <div class="display-5 fw-bold counter" data-num="15">0</div>
+                        <p class="mb-0">hahaha</p>
+                    </div>
+
+                 
+                </div>
+
+                <div class="col-4">
+                    <div class="counter-box p-4">
+                        <div class="display-5 fw-bold counter" data-num="38">0</div>
+                        <p class="mb-0">hehehe</p>
+                    </div>
+
+                 
+                </div>
+
+                <div class="col-4">
+                    <div class="counter-box p-4">
+                        <div class="display-5 fw-bold counter" data-num="976">0</div>
+                        <p class="mb-0">hohoho</p>
+                    </div>
+
+                 
+                </div>
+            </div>
+        </div>
+        <script>
+            $('.counter').each(function () {
+                var $this = $(this);
+
+                $this.waypoint(function () {
+                    var target = $this.data('num');
+
+                    $this.animateNumber(
+                        { number: target },
+                        1500 // 動畫時間
+                    );
+
+                    this.destroy(); // ⭐ 只執行一次
+                }, {
+                    offset: '80%' // 元素出現在視窗 80% 高度時啟動
+                });
+            });
+        </script>
         
     </main>
 
-    <script>
-        // Year
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Mobile menu
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        menuBtn.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
-        
-        // Dark mode toggle
-        const darkToggle = document.getElementById('darkToggle');
-        darkToggle?.addEventListener('click', ()=>{
-            document.documentElement.classList.toggle('dark');
-            // Persist choice
-            const isDark = document.documentElement.classList.contains('dark');
-            localStorage.setItem('prefer-dark', isDark ? '1' : '0');
-        });
-        // Load preference
-        if(localStorage.getItem('prefer-dark') === '1') document.documentElement.classList.add('dark');
-        
-        // Contact form demo (不會真的送出)
-        const form = document.getElementById('contactForm');
-        const status = document.getElementById('formStatus');
-        form.addEventListener('submit', (e)=>{
-            e.preventDefault();
-            const data = new FormData(form);
-            status.textContent = '送出中...';
-            setTimeout(()=>{
-            status.textContent = '已送出，感謝你的訊息！(此範例不會實際送出)';
-            form.reset();
-            }, 700);
-        });
-    </script>
+    
 
     <style>
     * { box-sizing: border-box; }
@@ -549,8 +612,8 @@
 
         
         
-        <script type="text/javascript" src="/asset/backend/js/base.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/backend/js/custom.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/backend/js/hahaha.js?v=1.0.0"></script>
+        <script type="text/javascript" src="/asset/frontend/js/base.js?v=1.0.0"></script>
+<script type="text/javascript" src="/asset/frontend/js/custom.js?v=1.0.0"></script>
+<script type="text/javascript" src="/asset/frontend/js/hahaha.js?v=1.0.0"></script>
     </body>
 </html>

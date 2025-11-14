@@ -36,12 +36,24 @@ $(function () {
         }, 200);
     });
 
-    $(function () {
-        $(".footer-title").click(function () {
-            if ($(window).width() < 768) {
-                $($(this).data("target")).collapse('toggle');
-            }
-        });
+    $(".footer-title").click(function () {
+        if ($(window).width() < 768) {
+            $($(this).data("target")).collapse('toggle');
+        }
+    });
+
+    // 點問題標題展開 / 收合
+    $('.question-header').on('click', function () {
+      
+        var $item = $(this).closest('.question-item');
+        var $body = $item.find('.question-body');
+
+        // 如果只想「單一」展開，先把其他關掉
+        $('.question-item').not($item).removeClass('open').find('.question-body').slideUp(150);
+
+        // 切換自己
+        $item.toggleClass('open');
+        $body.stop(true, true).slideToggle(150);
     });
 
     
