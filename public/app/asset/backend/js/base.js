@@ -48,6 +48,9 @@ $(document).ready(function () {
         }
     });
 
+    $("#sidebar").addClass("full");
+    $("#content").addClass("full");
+
 
 
 

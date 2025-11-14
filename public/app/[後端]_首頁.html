@@ -3,29 +3,41 @@
     <head>
         
 
-        <meta name="description" content="hahaha" />
                 <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>hahaha官網 - 後台</title>
+
+
+
+
 
 
         <link rel="stylesheet" href="/asset/plugin//bootstrap/dist/css/bootstrap.css?v=1.0.0" type="text/css" />
 <link rel="stylesheet" href="/asset/plugin//sweetalert2/dist/sweetalert2.css?v=1.0.0" type="text/css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         
+<link rel="stylesheet" href="/asset/plugin//datatables.net-bs5/css/dataTables.bootstrap5.min.css?v=1.0.0" type="text/css" />
+<link rel="stylesheet" href="/asset/plugin//datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css?v=1.0.0" type="text/css" />
 <link rel="stylesheet" href="/asset/backend/css/base.css?v=1.0.0" type="text/css" />
 <link rel="stylesheet" href="/asset/backend/css/custom.css?v=1.0.0" type="text/css" />
 <link rel="stylesheet" href="/asset/backend/css/hahaha.css?v=1.0.0" type="text/css" />
+        <script type="text/javascript" src="/asset/plugin//jquery/dist/jquery.js?v=1.0.0"></script>
+<script type="text/javascript" src="/asset/plugin//bootstrap/dist/js/bootstrap.bundle.js?v=1.0.0"></script>
+<script type="text/javascript" src="/asset/plugin//sweetalert2/dist/sweetalert2.js?v=1.0.0"></script>
+<script type="text/javascript" src="/asset/plugin//datatables.net/js/jquery.dataTables.min.js?v=1.0.0"></script>
+<script type="text/javascript" src="/asset/plugin//datatables.net-bs5/js/dataTables.bootstrap5.min.js?v=1.0.0"></script>
+<script type="text/javascript" src="/asset/plugin//datatables.net-responsive/js/dataTables.responsive.min.js?v=1.0.0"></script>
+<script type="text/javascript" src="/asset/plugin//datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js?v=1.0.0"></script>
         
     </head>
-    <body class="bg-dark">
+    <body class="bg-dark text-light">
         <!-- 後台 NAVBAR -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top shadow">
     <div class="container-fluid">
 
         <!-- LOGO + 標題 -->
         <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="/asset/logo.png" alt="Logo"
+            <img src="/image/iTW_icon.png" alt="Logo"
                  class="me-2" style="height:32px; width:auto;">
             <span class="fw-semibold">後台管理系統</span>
         </a>
@@ -92,6 +104,10 @@
     </div>
 </nav>
 
+        
+        
+        <!-- Hero -->
+            <div class="layout">
         <!-- 🔻 左側 Sidebar -->
 <div id="sidebar">
     <!-- ⭐ Sidebar Toggle -->
@@ -100,6 +116,41 @@
     </a>
 
     <!-- 第一層 -->
+    <a class="nav-link menu-toggle">
+        <i class="fa-solid fa-box"></i>
+        <span class="text">表單</span>
+        <i class="menu-arrow fa-solid fa-chevron-right"></i>
+    </a>
+    <div class="submenu">
+
+        <!-- 第二層 -->
+        <a class="nav-link" href="/backend/table/base">
+            <i class="fa-solid fa-list"></i>
+            <span class="text">基本</span>
+        </a>
+        <a class="nav-link" href="/backend/table/modal">
+            <i class="fa-solid fa-list"></i>
+            <span class="text">對話框</span>
+        </a>
+    </div>
+
+    <!-- 第一層 -->
+    <a class="nav-link menu-toggle">
+        <i class="fa-solid fa-box"></i>
+        <span class="text">權限</span>
+        <i class="menu-arrow fa-solid fa-chevron-right"></i>
+    </a>
+    <div class="submenu">
+
+        <!-- 第二層 -->
+        <a class="nav-link" href="/backend/permission">
+            <i class="fa-solid fa-list"></i>
+            <span class="text">權限</span>
+        </a>
+
+    </div>
+
+
     <a class="nav-link menu-toggle">
         <i class="fa-solid fa-box"></i>
         <span class="text">商品管理</span>
@@ -138,18 +189,36 @@
 </div>
 
 
-        
-        <!-- Hero -->
-           
+
+        <div class="content">
+        </div>
+    </div>
+
+        <footer class="bg-dark text-light py-3 fixed-bottom">
+    <div class="container d-flex justify-content-between align-items-center">
+        <span>© 2025 hahaha Company</span>
+
+        <div>
+            <a href="#" class="text-light me-3 text-decoration-none">隱私權</a>
+            <a href="#" class="text-light me-3 text-decoration-none">使用條款</a>
+
+            <a href="#" class="text-light me-2">
+                <i class="fa-brands fa-facebook fs-5"></i>
+            </a>
+            <a href="#" class="text-light me-2">
+                <i class="fa-brands fa-instagram fs-5"></i>
+            </a>
+            <a href="#" class="text-light">
+                <i class="fa-brands fa-youtube fs-5"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
 
         
-
         
-        
-        <script type="text/javascript" src="/asset/plugin//jquery/dist/jquery.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/plugin//bootstrap/dist/js/bootstrap.bundle.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/plugin//sweetalert2/dist/sweetalert2.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/backend/js/base.js?v=1.0.0"></script>
+        <script type="text/javascript" src="/asset/backend/js/base.js?v=1.0.0"></script>
 <script type="text/javascript" src="/asset/backend/js/custom.js?v=1.0.0"></script>
 <script type="text/javascript" src="/asset/backend/js/hahaha.js?v=1.0.0"></script>
     </body>

@@ -21,7 +21,7 @@ class nav
 
         <!-- LOGO + 標題 -->
         <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="/asset/logo.png" alt="Logo"
+            <img src="/image/iTW_icon.png" alt="Logo"
                  class="me-2" style="height:32px; width:auto;">
             <span class="fw-semibold">後台管理系統</span>
         </a>

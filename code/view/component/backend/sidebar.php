@@ -24,6 +24,41 @@ class sidebar
     <!-- 第一層 -->
     <a class="nav-link menu-toggle">
         <i class="fa-solid fa-box"></i>
+        <span class="text">表單</span>
+        <i class="menu-arrow fa-solid fa-chevron-right"></i>
+    </a>
+    <div class="submenu">
+
+        <!-- 第二層 -->
+        <a class="nav-link" href="/backend/table/base">
+            <i class="fa-solid fa-list"></i>
+            <span class="text">基本</span>
+        </a>
+        <a class="nav-link" href="/backend/table/modal">
+            <i class="fa-solid fa-list"></i>
+            <span class="text">對話框</span>
+        </a>
+    </div>
+
+    <!-- 第一層 -->
+    <a class="nav-link menu-toggle">
+        <i class="fa-solid fa-box"></i>
+        <span class="text">權限</span>
+        <i class="menu-arrow fa-solid fa-chevron-right"></i>
+    </a>
+    <div class="submenu">
+
+        <!-- 第二層 -->
+        <a class="nav-link" href="/backend/permission">
+            <i class="fa-solid fa-list"></i>
+            <span class="text">權限</span>
+        </a>
+
+    </div>
+
+
+    <a class="nav-link menu-toggle">
+        <i class="fa-solid fa-box"></i>
         <span class="text">商品管理</span>
         <i class="menu-arrow fa-solid fa-chevron-right"></i>
     </a>

@@ -1,8 +1,8 @@
 $(function () {
 
     // 搜尋列 toggle
-    $('#asus-search-toggle').on('click', function () {
-        $('#asus-searchbar').stop(true, true).slideToggle(160);
+    $('#hahaha-search-toggle').on('click', function () {
+        $('#hahaha-searchbar').stop(true, true).slideToggle(160);
     });
 
     // 桌機版：hover 展開 mega menu（兼容 Bootstrap 5）
@@ -29,7 +29,7 @@ $(function () {
     $(window).on('resize', bindDesktopMega);
 
     // 手機多層選單箭頭動畫（可有可無）
-    $('.asus-mobile-toggle, .asus-mobile-toggle2').on('click', function () {
+    $('.hahaha-mobile-toggle, .hahaha-mobile-toggle2').on('click', function () {
         var $btn = $(this);
         setTimeout(function () {
             // aria-expanded 會由 Bootstrap 自己改

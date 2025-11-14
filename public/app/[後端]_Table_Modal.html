@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="zh-Hant">
+    <head>
+        
+
+                <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>hahaha官網 - 後台 - Table - Modal</title>
+
+
+
+
+
+
+        <link rel="stylesheet" href="/asset/plugin//bootstrap/dist/css/bootstrap.css?v=1.0.0" type="text/css" />
+<link rel="stylesheet" href="/asset/plugin//sweetalert2/dist/sweetalert2.css?v=1.0.0" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        
+<link rel="stylesheet" href="/asset/plugin//datatables.net-bs5/css/dataTables.bootstrap5.min.css?v=1.0.0" type="text/css" />
+<link rel="stylesheet" href="/asset/plugin//datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css?v=1.0.0" type="text/css" />
+<link rel="stylesheet" href="/asset/backend/css/base.css?v=1.0.0" type="text/css" />
+<link rel="stylesheet" href="/asset/backend/css/custom.css?v=1.0.0" type="text/css" />
+<link rel="stylesheet" href="/asset/backend/css/hahaha.css?v=1.0.0" type="text/css" />
+        <script type="text/javascript" src="/asset/plugin//jquery/dist/jquery.js?v=1.0.0"></script>
+<script type="text/javascript" src="/asset/plugin//bootstrap/dist/js/bootstrap.bundle.js?v=1.0.0"></script>
+<script type="text/javascript" src="/asset/plugin//sweetalert2/dist/sweetalert2.js?v=1.0.0"></script>
+<script type="text/javascript" src="/asset/plugin//datatables.net/js/jquery.dataTables.min.js?v=1.0.0"></script>
+<script type="text/javascript" src="/asset/plugin//datatables.net-bs5/js/dataTables.bootstrap5.min.js?v=1.0.0"></script>
+<script type="text/javascript" src="/asset/plugin//datatables.net-responsive/js/dataTables.responsive.min.js?v=1.0.0"></script>
+<script type="text/javascript" src="/asset/plugin//datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js?v=1.0.0"></script>
+        
+    </head>
+    <body class="bg-dark text-light">
+        <!-- 後台 NAVBAR -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top shadow">
+    <div class="container-fluid">
+
+        <!-- LOGO + 標題 -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="/image/iTW_icon.png" alt="Logo"
+                 class="me-2" style="height:32px; width:auto;">
+            <span class="fw-semibold">後台管理系統</span>
+        </a>
+
+        <!-- 漢堡按鈕 -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- 展開區 -->
+        <div class="collapse navbar-collapse" id="adminNavbar">
+
+            <!-- 左側選單 -->
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Dashboard</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">訂單管理</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        會員管理
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">會員列表</a></li>
+                        <li><a class="dropdown-item" href="#">黑名單</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">匯出報表</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">商品管理</a>
+                </li>
+
+            </ul>
+
+            <!-- 搜尋 -->
+            <form class="d-flex me-3" role="search">
+                <input class="form-control form-control-sm bg-dark text-light border-secondary"
+                       type="search" placeholder="搜尋…" style="width:140px;">
+            </form>
+
+            <!-- 管理員 -->
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        管理員 Admin
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">個人資料</a></li>
+                        <li><a class="dropdown-item" href="#">修改密碼</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">登出</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+        
+        
+        <!-- Hero -->
+            <div class="layout">
+        <!-- 🔻 左側 Sidebar -->
+<div id="sidebar">
+    <!-- ⭐ Sidebar Toggle -->
+    <a class="nav-link" id="sidebarToggle">
+        <i class="fa-solid fa-bars"></i>
+    </a>
+
+    <!-- 第一層 -->
+    <a class="nav-link menu-toggle">
+        <i class="fa-solid fa-box"></i>
+        <span class="text">表單</span>
+        <i class="menu-arrow fa-solid fa-chevron-right"></i>
+    </a>
+    <div class="submenu">
+
+        <!-- 第二層 -->
+        <a class="nav-link" href="/backend/table/base">
+            <i class="fa-solid fa-list"></i>
+            <span class="text">基本</span>
+        </a>
+        <a class="nav-link" href="/backend/table/modal">
+            <i class="fa-solid fa-list"></i>
+            <span class="text">對話框</span>
+        </a>
+    </div>
+
+    <!-- 第一層 -->
+    <a class="nav-link menu-toggle">
+        <i class="fa-solid fa-box"></i>
+        <span class="text">權限</span>
+        <i class="menu-arrow fa-solid fa-chevron-right"></i>
+    </a>
+    <div class="submenu">
+
+        <!-- 第二層 -->
+        <a class="nav-link" href="/backend/permission">
+            <i class="fa-solid fa-list"></i>
+            <span class="text">權限</span>
+        </a>
+
+    </div>
+
+
+    <a class="nav-link menu-toggle">
+        <i class="fa-solid fa-box"></i>
+        <span class="text">商品管理</span>
+        <i class="menu-arrow fa-solid fa-chevron-right"></i>
+    </a>
+    <div class="submenu">
+
+        <!-- 第二層 -->
+        <a class="nav-link menu-toggle">
+            <i class="fa-solid fa-list"></i>
+            <span class="text">商品列表</span>
+            <i class="menu-arrow fa-solid fa-chevron-right"></i>
+        </a>
+        <div class="submenu">
+
+            <!-- 第三層 -->
+            <a class="nav-link menu-toggle">
+                <i class="fa-solid fa-tags"></i>
+                <span class="text">商品分類</span>
+                <i class="menu-arrow fa-solid fa-chevron-right"></i>
+            </a>
+            <div class="submenu">
+
+                <!-- 第四層 -->
+                <a class="nav-link"><i class="fa-solid fa-circle"></i><span class="text">分類 A</span></a>
+                <a class="nav-link"><i class="fa-solid fa-circle"></i><span class="text">分類 B</span></a>
+                <a class="nav-link"><i class="fa-solid fa-circle"></i><span class="text">分類 C</span></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+        <div class="content">
+
+            <div class="row mb-2">
+                <h3 class="mb-4">編輯資料</h3>
+                <!-- 🔹 上排 Select 1 -->
+                <div class="col-md-6">
+                    <label class="form-label">分類</label>
+                    <select id="category" class="form-control bg-dark text-light border-secondary">
+                        <option value="">請選擇</option>
+                        <option value="A">分類 A</option>
+                        <option value="B">分類 B</option>
+                        <option value="C">分類 C</option>
+                    </select>
+                </div>
+
+                <!-- 🔹 上排 Select 2 -->
+                <div class="col-md-6">
+                    <label class="form-label">狀態</label>
+                    <select id="status" class="form-control bg-dark text-light border-secondary">
+                        <option value="">請選擇</option>
+                        <option value="1">啟用</option>
+                        <option value="0">停用</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 🔥 左右兩顆按鈕 -->
+            <div class="d-flex justify-content-between mb-3">
+                <button id="btnAdd" class="btn btn-success">
+                    <i class="fa-solid fa-plus me-1"></i> 新增
+                </button>
+
+                <button id="btnExport" class="btn btn-warning">
+                    <i class="fa-solid fa-file-export me-1"></i> 匯出
+                </button>
+            </div>
+            <div class="table-wrapper">
+                <table id="myTable" class="table table-dark table-striped dt-responsive nowrap" style="width:100%">
+
+                </table>
+                <div id="myPager" class="d-flex justify-content-end mt-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1">
+        <div class="modal-dialog modal-lg"> <!-- ⭐ 加大版 -->
+            <div class="modal-content bg-dark text-light">
+
+            <div class="modal-header">
+                <h5 class="modal-title">編輯資料</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <input type="hidden" id="id">
+
+                <div class="row g-3">
+
+                <!-- 🔹 第 1 欄 -->
+                <div class="col-md-6">
+                    <label class="form-label">姓名</label>
+                    <input type="text" id="name" class="form-control">
+                </div>
+
+                <!-- 🔹 第 2 欄 -->
+                <div class="col-md-6">
+                    <label class="form-label">職位</label>
+                    <input type="text" id="position" class="form-control">
+                </div>
+
+                <!-- 🔹 第 3 欄 -->
+                <div class="col-md-6">
+                    <label class="form-label">Office</label>
+                    <input type="text" id="office" class="form-control">
+                </div>
+
+                <!-- 🔹 第 4 欄 -->
+                <div class="col-md-6">
+                    <label class="form-label">年齡</label>
+                    <input type="number" id="age" class="form-control">
+                </div>
+
+                <!-- 🔹 第 5 欄 -->
+                <div class="col-md-6">
+                    <label class="form-label">開始日期</label>
+                    <input type="date" id="start_date" class="form-control">
+                </div>
+
+                <!-- 🔹 第 6 欄 -->
+                <div class="col-md-6">
+                    <label class="form-label">薪水</label>
+                    <input type="text" id="salary" class="form-control">
+                </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                <button type="button" id="btnSave" class="btn btn-primary">儲存</button>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function renderPager(json) {
+
+            let length = table.page.len();   // 每頁筆數（如 10）
+            let start  = table.page.info().start; // 本頁第一筆 index
+            let total  = json.recordsFiltered;    // ⭐ 搜尋後總筆數（後端提供）
+
+            let currentPage = Math.floor(start / length) + 1;
+            let totalPages  = Math.ceil(total / length);
+
+            buildPager(currentPage, totalPages);
+        }
+
+        function buildPager(current, total) {
+            let max = 5; // 一次顯示幾個頁碼
+            let html = `<ul class="pagination pagination-sm">`;
+
+            // 上一頁
+            html += `
+                <li class="page-item ${current === 1 ? "disabled" : ""}">
+                    <a class="page-link" data-page="${current - 1}">&laquo;</a>
+                </li>
+            `;
+
+            // 計算頁碼的起始與結束
+            let start = Math.max(1, current - Math.floor(max / 2));
+            let end = Math.min(total, start + max - 1);
+
+            if (end - start < max - 1) {
+                start = Math.max(1, end - max + 1);
+            }
+
+            // 左 ...
+            if (start > 1) {
+                html += `
+                    <li class="page-item">
+                        <a class="page-link" data-page="1">1</a>
+                    </li>
+                    <li class="page-item disabled"><a class="page-link">...</a></li>
+                `;
+            }
+
+            // 中間頁碼
+            for (let i = start; i <= end; i++) {
+                html += `
+                    <li class="page-item ${current === i ? "active" : ""}">
+                        <a class="page-link" data-page="${i}">${i}</a>
+                    </li>
+                `;
+            }
+
+            // 右 ...
+            if (end < total) {
+                html += `
+                    <li class="page-item disabled"><a class="page-link">...</a></li>
+                    <li class="page-item">
+                        <a class="page-link" data-page="${total}">${total}</a>
+                    </li>
+                `;
+            }
+
+            // 下一頁
+            html += `
+                <li class="page-item ${current === total ? "disabled" : ""}">
+                    <a class="page-link" data-page="${current + 1}">&raquo;</a>
+                </li>
+            `;
+
+            html += `</ul>`;
+            $("#myPager").html(html);
+        }
+
+
+        let table = $('#myTable').DataTable({
+            processing: true,
+            serverSide: true,
+
+            responsive: {
+                details: {
+                    type: 'column',
+                    target: 0,
+                    renderer: function (api, rowIdx, columns) {
+                        let hidden = columns.filter(col => col.hidden);
+
+                        if (!hidden.length) return false;
+
+                        return `
+                            <table class="table table-sm table-dark mb-0">
+                                ${hidden.map(col => `
+                                    <tr>
+                                        <th style="width:140px">${col.title}</th>
+                                        <td>${col.data}</td>
+                                    </tr>
+                                `).join('')}
+                            </table>
+                        `;
+                    }
+                }
+            },
+
+            ajax: {
+                url: '/asset/json/table/base.json',
+                type: 'GET',
+                cache: false,
+                dataSrc: function (json) {
+                    renderPager(json);
+                    return json.data;
+                }
+            },
+
+            columns: [
+                {
+                    title: "",
+                    className: "dtr-control text-center", // ⭐ 修正：官方 control 使用 dtr-control
+                    orderable: false,
+                    data: null,
+                    defaultContent: ""
+                },
+                { title: "Name", data: "name" },
+                { title: "Position", data: "position" },
+                { title: "Office", data: "office" },
+                { title: "Age", data: "age" },
+                { title: "Start date", data: "start_date" },
+                { title: "Salary", data: "salary" },
+
+                {
+                    title: "操作",
+                    data: null,
+                    orderable: false,
+                    searchable: false,
+                    className: "text-center",
+                    render: function (data, type, row) {
+                        return `
+                            <button class="btn btn-sm btn-primary btn-edit me-1" data-id="${row.id}">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn btn-sm btn-danger btn-delete" data-id="${row.id}">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        `;
+                    }
+                }
+            ],
+
+            columnDefs: [
+                // ⭐ 左邊控制按鈕 / 右邊操作欄永遠顯示
+                { responsivePriority: 1, targets: 0 },
+                { responsivePriority: 1, targets: -1 },
+
+                // ⭐ Name 永遠顯示（所有裝置）
+                { className: "all", targets: 1 },
+
+                // 📟 平板以上才顯示 Position & Office
+                { className: "min-tablet-p", targets: [2, 3] },
+
+                // 🖥 桌機以上才顯示 Age / Start date / Salary
+                { className: "min-desktop", targets: [4, 5, 6] },
+            ],
+
+            pageLength: 10,
+            language: {
+                url: "/asset/json/datatables/zh-Hant.json"
+            },
+        });
+
+
+        $(document).on("click", "#myPager .page-link", function () {
+            let page = $(this).data("page") - 1; // DataTables 的 page 是 0-based
+            table.page(page).draw("page");
+        });
+
+        $('#myTable tbody').on('click', 'td.dt-control', function () {
+            let tr = $(this).closest('tr');
+            let row = table.row(tr);
+
+            if (row.child.isShown()) {
+                row.child.hide();
+                tr.removeClass('shown');
+            } else {
+                row.child.show();
+                tr.addClass('shown');
+            }
+        });
+
+        const modal = new bootstrap.Modal(document.getElementById('myModal'));
+        $(`#btnAdd`).click(function() {
+            modal.show();
+
+        })
+    </script>
+    <style>
+        .dataTables_paginate {
+            display: none;
+        }
+    </style>
+
+        <footer class="bg-dark text-light py-3 fixed-bottom">
+    <div class="container d-flex justify-content-between align-items-center">
+        <span>© 2025 hahaha Company</span>
+
+        <div>
+            <a href="#" class="text-light me-3 text-decoration-none">隱私權</a>
+            <a href="#" class="text-light me-3 text-decoration-none">使用條款</a>
+
+            <a href="#" class="text-light me-2">
+                <i class="fa-brands fa-facebook fs-5"></i>
+            </a>
+            <a href="#" class="text-light me-2">
+                <i class="fa-brands fa-instagram fs-5"></i>
+            </a>
+            <a href="#" class="text-light">
+                <i class="fa-brands fa-youtube fs-5"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+        
+        
+        <script type="text/javascript" src="/asset/backend/js/base.js?v=1.0.0"></script>
+<script type="text/javascript" src="/asset/backend/js/custom.js?v=1.0.0"></script>
+<script type="text/javascript" src="/asset/backend/js/hahaha.js?v=1.0.0"></script>
+    </body>
+</html>

@@ -27,7 +27,7 @@ Route::prefix('')
         // '',
     ])->group(function () {
     Route::get('/', [Frontend_Index_Index_Controller::class, "Index"]);
-
+    Route::get('/login', [Frontend_Index_Index_Controller::class, "Login"]);
     // -----------------------------------------------------
 
 });

@@ -110,10 +110,11 @@
                 margin-bottom: 8px;
                 font-size: 18px;
                 font-weight: bold;
+                color: rgba(0,0,0,1);
             }
             .feature-box p {
-                color: #666;
                 font-size: 14px;
+                color: rgba(0,0,0,1);
             }
         </style>
 

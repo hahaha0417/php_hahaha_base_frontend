@@ -78,6 +78,10 @@ class layout
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title><?php echo $parameter->page->title; ?></title>
 
+
+
+
+
 <?php
     }
 
@@ -94,6 +98,18 @@ class layout
         
 <?php 
         // echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('font-awesome/css/font-awesome.css'));
+        echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('/datatables.net-bs5/css/dataTables.bootstrap5.min.css'));
+        echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css'));
+
+
+
+
+
+
+
+
+
+
 
         echo $hahaha_function_base->Css($hahaha_function_base->Url_Asset('backend/css/base.css'));
         echo $hahaha_function_base->Css($hahaha_function_base->Url_Asset('backend/css/custom.css'));
@@ -108,6 +124,27 @@ class layout
         echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('/jquery/dist/jquery.js'));
         echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('/bootstrap/dist/js/bootstrap.bundle.js'));
         echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('/sweetalert2/dist/sweetalert2.js'));
+
+        echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('/datatables.net/js/jquery.dataTables.min.js'));
+        echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('/datatables.net-bs5/js/dataTables.bootstrap5.min.js'));
+        echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('/datatables.net-responsive/js/dataTables.responsive.min.js'));
+        echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js'));
+
+
+
+
+
+        // echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('font-awesome\js\font-awesome.js'));
+    }
+
+    public function view_js_page()
+    {
+        $hahaha_function_base = hahaha_function_base::instance();
+
+
+
+
+
 
         echo $hahaha_function_base->Js($hahaha_function_base->Url_Asset('backend/js/base.js'));
         echo $hahaha_function_base->Js($hahaha_function_base->Url_Asset('backend/js/custom.js'));

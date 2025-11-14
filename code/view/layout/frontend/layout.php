@@ -74,6 +74,7 @@ class layout
         $parameter = \hahaha\parameter::instance();
         $hahaha_function_base = hahaha_function_base::instance();
 ?>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title><?php echo $parameter->page->title; ?></title>
@@ -105,12 +106,27 @@ class layout
         echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('/bootstrap/dist/js/bootstrap.bundle.js'));
         echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('/sweetalert2/dist/sweetalert2.js'));
 
-        echo $hahaha_function_base->Js($hahaha_function_base->Url_Asset('frontend/js/base.js'));
-        echo $hahaha_function_base->Js($hahaha_function_base->Url_Asset('frontend/js/custom.js'));
-        echo $hahaha_function_base->Js($hahaha_function_base->Url_Asset('frontend/js/hahaha.js'));
+
 
         // echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('font-awesome\js\font-awesome.js'));
     }
+
+    public function view_js_page()
+    {
+        $hahaha_function_base = hahaha_function_base::instance();
+
+
+
+
+
+
+        echo $hahaha_function_base->Js($hahaha_function_base->Url_Asset('backend/js/base.js'));
+        echo $hahaha_function_base->Js($hahaha_function_base->Url_Asset('backend/js/custom.js'));
+        echo $hahaha_function_base->Js($hahaha_function_base->Url_Asset('backend/js/hahaha.js'));
+
+        // echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('font-awesome\js\font-awesome.js'));
+    }
+
 
     // -----------------------------------------
     //
