@@ -41,4 +41,23 @@ class Index_Controller extends \hahaha\base_ontroller
 
         return $view;
     }
+
+    public function About()
+    {
+        $parameter = \hahaha\parameter::instance();
+
+        $parameter->page = new \StdClass;
+        $parameter->page->title = "hahaha官網";
+
+        $file_name = public_path("../../../public/app/[前端]_關於哈哥.html"); // 存到 public
+        $view = view('frontend.index.about', [
+            'parameter' => $parameter,
+        ]);
+
+        $this->hahaha($view, $file_name);
+
+        
+
+        return $view;
+    }
 }

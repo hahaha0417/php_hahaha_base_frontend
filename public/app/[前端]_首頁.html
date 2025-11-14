@@ -89,7 +89,9 @@
                         </div>
                     </li> -->
 
-                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">關於哈哥</a>
+                    </li>
 
                     <!-- 7. Support：單純連結 -->
                     <li class="nav-item">
@@ -409,68 +411,165 @@
                 </div>
             </div>
 
-           
+            
 
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js"></script>
-        <div class="container py-5">
-            <h1 class="text-center mb-4">
-                hahaha
-            </h1>
-            <h3 class="text-center mb-4">
-                命名規則
-            </h3>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js"></script>
+<div class="container py-5">
+    <h1 class="text-center mb-4">
+        hahaha
+    </h1>
+    <h3 class="text-center mb-4">
+        命名規則
+    </h3>
+    
+
+    <div class="row text-center">
+        <div class="col-4">
+            <div class="counter-box p-4">
+                <div class="display-5 fw-bold counter" data-num="15">0</div>
+                <p class="mb-0">hahaha</p>
+            </div>
+
             
+        </div>
 
-            <div class="row text-center">
-                <div class="col-4">
-                    <div class="counter-box p-4">
-                        <div class="display-5 fw-bold counter" data-num="15">0</div>
-                        <p class="mb-0">hahaha</p>
-                    </div>
+        <div class="col-4">
+            <div class="counter-box p-4">
+                <div class="display-5 fw-bold counter" data-num="38">0</div>
+                <p class="mb-0">hehehe</p>
+            </div>
 
-                 
+            
+        </div>
+
+        <div class="col-4">
+            <div class="counter-box p-4">
+                <div class="display-5 fw-bold counter" data-num="976">0</div>
+                <p class="mb-0">hohoho</p>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+<script>
+    $('.counter').each(function () {
+        var $this = $(this);
+
+        $this.waypoint(function () {
+            var target = $this.data('num');
+
+            $this.animateNumber(
+                { number: target },
+                1500 // 動畫時間
+            );
+
+            this.destroy(); // ⭐ 只執行一次
+        }, {
+            offset: '80%' // 元素出現在視窗 80% 高度時啟動
+        });
+    });
+</script>
+
+
+
+        <section class="resource-box my-5">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="resource-card col-6">
+                <!-- 圖片 -->
+                <div class="resource-img">
+                    <img src="/image/arch/php_single.png" alt="php_single">
                 </div>
 
-                <div class="col-4">
-                    <div class="counter-box p-4">
-                        <div class="display-5 fw-bold counter" data-num="38">0</div>
-                        <p class="mb-0">hehehe</p>
-                    </div>
-
-                 
+                <!-- 文字內容 -->
+                <div class="resource-content">
+                    <h4 class="resource-title">php single</h4>
+                    <p class="resource-text">
+                        專為worker打造的殼，可以跑job
+                    </p>
+                </div>
+            </div>
+            <div class="resource-card col-6">
+                <!-- 圖片 -->
+                <div class="resource-img">
+                    <img src="/image/arch/php_arch.jpg" alt="php_arch">
                 </div>
 
-                <div class="col-4">
-                    <div class="counter-box p-4">
-                        <div class="display-5 fw-bold counter" data-num="976">0</div>
-                        <p class="mb-0">hohoho</p>
-                    </div>
-
-                 
+                <!-- 文字內容 -->
+                <div class="resource-content">
+                    <h4 class="resource-title">php arch</h4>
+                    <p class="resource-text">
+                        原生套版法，code可以再利用
+                    </p>
                 </div>
             </div>
         </div>
-        <script>
-            $('.counter').each(function () {
-                var $this = $(this);
+        <div class="row mb-3">
+            <div class="resource-card col-6">
+                <!-- 圖片 -->
+                <div class="resource-img">
+                    <img src="/image/arch/c_sharp_base.png" alt="c_sharp_base">
+                </div>
 
-                $this.waypoint(function () {
-                    var target = $this.data('num');
+                <!-- 文字內容 -->
+                <div class="resource-content">
+                    <h4 class="resource-title">c_sharp base</h4>
+                    <p class="resource-text">
+                        基礎winform做法
+                    </p>
+                </div>
+            </div>
+            <div class="resource-card col-6">
+                <!-- 圖片 -->
+                <div class="resource-img">
+                    <img src="/image/arch/c_sharp_base_v2.png" alt="c_sharp_base_v2">
+                </div>
 
-                    $this.animateNumber(
-                        { number: target },
-                        1500 // 動畫時間
-                    );
+                <!-- 文字內容 -->
+                <div class="resource-content">
+                    <h4 class="resource-title">c_sharp base v2</h4>
+                    <p class="resource-text">
+                        換頁面winform做法
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+<script>
+    $(function () {
+        function revealResourceCards() {
+            $('.resource-card').each(function () {
+                var $card = $(this);
+                if ($card.hasClass('show')) return;
 
-                    this.destroy(); // ⭐ 只執行一次
-                }, {
-                    offset: '80%' // 元素出現在視窗 80% 高度時啟動
-                });
+                var cardTop = $card.offset().top;
+                var scrollBottom = $(window).scrollTop() + $(window).height();
+
+                // 元素進入畫面 80px 就顯示
+                if (cardTop < scrollBottom - 80) {
+                    $card.addClass('show');
+                }
             });
-        </script>
+        }
+
+        // 初次執行
+        revealResourceCards();
+
+        // 滾動時檢查
+        $(window).on('scroll', function () {
+            revealResourceCards();
+        });
+    });
+</script>
+
+
+
         
     </main>
 

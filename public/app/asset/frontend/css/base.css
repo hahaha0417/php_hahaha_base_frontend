@@ -461,3 +461,133 @@
     color: #f5f5f5;
     text-shadow: 0 0 8px rgba(255,255,255,0.25);
 }
+
+.resource-card {
+    background: #1e1e2b;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+    max-width: 900px;
+    margin: 0 auto;
+    transition: .35s ease;
+    transform: translateY(0);
+    position: relative;
+}
+
+/* hover 效果 */
+.resource-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65);
+}
+
+/* hover 光暈 */
+.resource-card:hover::before {
+    opacity: 1;
+}
+
+/* 光暈背景 */
+.resource-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    background: radial-gradient(
+        circle at top left,
+        rgba(210, 255, 210, 0.25),
+        transparent 60%
+    );
+    opacity: 0;
+    transition: .35s ease;
+    pointer-events: none;
+}
+
+
+/* 上方圖片容器（固定高度，你可調） */
+.resource-img {
+    height: 220px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* 等比例完整顯示 */
+.resource-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ⭐⭐ 等比例完整顯示 */
+    transition: transform .35s ease;
+    padding: 10px; /* 避免貼邊，可調整 */
+}
+
+/* hover 放大微效果（可保留）*/
+.resource-card:hover .resource-img img {
+    transform: scale(1.05);
+}
+
+/* 文字 */
+.resource-content {
+    padding: 25px;
+    background: #2d2d3a;
+    color: #cfcfe8;
+}
+
+.resource-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.resource-text {
+    color: #d2d2e1;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* RWD */
+@media (max-width: 768px) {
+    .resource-img img {
+        height: 180px;
+    }
+}
+
+#about-glass {
+    position: relative;
+    padding: 80px 0;
+}
+
+#about-glass .container{
+    max-width: 100% !important;
+}
+
+.glass-box {
+    width: 100%;
+    max-width: 97%;
+    border-radius: 20px;
+
+    /* ⭐ 重點：半透明紫色玻璃效果 */
+    background: rgba(210, 255, 210, 0.15); /* 紫色透明 */
+    backdrop-filter: blur(2px);  /* 背景模糊 */
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+/* ⭐ 表單輸入框半透明 */
+.glass-input {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+.glass-input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.glass-input:focus {
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+}
