@@ -19,15 +19,15 @@ COPY . /php_hahaha_base_frontend
 
 WORKDIR /php_hahaha_base_frontend/batch_file/git
 
-RUN chmod +x ./clone.sh && ./clone.sh
 
+CMD ["./clone.sh.sh"]
 
 WORKDIR /php_hahaha_base_frontend/project/app
 
 
 # Install dependencies
-#RUN composer install --optimize-autoloader --no-dev
-RUN composer install --no-dev
+RUN composer install --optimize-autoloader --no-dev
+
 
 # Generate optimized config
 RUN php artisan config:clear \
