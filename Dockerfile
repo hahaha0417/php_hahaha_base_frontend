@@ -40,7 +40,7 @@ FROM debian:12 AS runtime
 
 RUN apt-get update && apt-get install -y \
     nginx php-fpm php-mbstring php-zip php-xml php-curl php-pgsql php-mysql php-cli php-opcache \
-    && apt-get clean
+     && apt-get install -y php-sqlite3 && apt-get clean
 
 # nginx config
 COPY deploy/nginx.conf /etc/nginx/sites-enabled/default
