@@ -46,7 +46,7 @@ COPY deploy/nginx.conf /etc/nginx/sites-enabled/default
 
 # copy built Laravel to runtime
 WORKDIR /var/www/html
-COPY --from=build /php_hahaha_base_frontend/public/app .
+COPY --from=build /php_hahaha_base_frontend
 
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
