@@ -17,6 +17,11 @@ WORKDIR /
 # Copy project
 COPY . /php_hahaha_base_frontend
 
+WORKDIR /php_hahaha_base_frontend/batch_file/git
+
+RUN chmod +x ./clone.sh && ./clone.sh
+
+
 WORKDIR /php_hahaha_base_frontend/project/app
 
 
