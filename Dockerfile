@@ -20,7 +20,8 @@ COPY . /php_hahaha_base_frontend
 WORKDIR /php_hahaha_base_frontend/porject/app
 
 # Install dependencies
-RUN composer install --optimize-autoloader --no-dev
+#RUN composer install --optimize-autoloader --no-dev
+RUN composer install --no-dev
 
 # Generate optimized config
 RUN php artisan config:clear \
