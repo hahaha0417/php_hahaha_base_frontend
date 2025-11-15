@@ -55,5 +55,8 @@ RUN mkdir -p /var/www/html/php_hahaha_base_frontend/project/app/storage /var/www
     chown -R www-data:www-data /var/www/html
 RUN chmod -R 755 /var/www/html
 
+docker exec -it <container-id> bash
+ls -l /var/www/html
+ls -l /var/www/html/app/public
 
 CMD service php8.2-fpm start && nginx -g "daemon off;"
