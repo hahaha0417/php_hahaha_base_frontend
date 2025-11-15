@@ -31,8 +31,6 @@ RUN php artisan config:clear \
     && php artisan view:clear
 
 # ===== Copy build result to /public/app =====
-RUN rm -rf /php_hahaha_base_frontend/public/app && \
-    cp -r /php_hahaha_base_frontend/project/app /php_hahaha_base_frontend/public/app
 
 
 # ===========================
@@ -54,7 +52,7 @@ COPY --from=build /php_hahaha_base_frontend ./php_hahaha_base_frontend
 RUN mkdir -p /var/www/html/php_hahaha_base_frontend/project/app/storage /var/www/html/php_hahaha_base_frontend/project/app/bootstrap/cache && \
     chown -R www-data:www-data /var/www/html
 RUN chmod -R 755 /var/www/html
-RUN chmod -R 755 /var/www/html/php_hahaha_base_frontend/public/app
+
 
 
 
