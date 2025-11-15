@@ -15,7 +15,7 @@ COPY . .
 
 # ----------- Your clone script ------------
 WORKDIR /php_hahaha_base_frontend/batch_file/git
-RUN chmod +x clone.sh && ./clone.sh
+RUN chmod +x "git clone.sh" && sh "git clone.sh"
 # -------------------------------------------
 
 # ===== Laravel build inside /project/app =====
