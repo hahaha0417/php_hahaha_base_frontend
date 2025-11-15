@@ -36,6 +36,8 @@ FROM nginx:alpine AS runtime
 RUN apk add --no-cache php82 php82-fpm php82-opcache \
     php82-mbstring php82-pdo php82-pdo_mysql php82-pdo_pgsql \
     php82-tokenizer php82-xml php82-zip
+	
+WORKDIR /
 
 # Copy Nginx config
 COPY deploy/nginx.conf /etc/nginx/conf.d/default.conf
