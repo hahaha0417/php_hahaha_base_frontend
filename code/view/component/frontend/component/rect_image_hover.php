@@ -9,6 +9,7 @@ class rect_image_hover
 {
     use \hahaha\instance;
 
+    public $Initial_ = false;
 	// 建構子
     public function __construct() {
  
@@ -18,6 +19,17 @@ class rect_image_hover
     {
         $hahaha_function_base = hahaha_function_base::instance();
 
+        if($this->Initial_)
+        {
+?>
+
+
+<?php 
+
+
+
+            $this->Initial_ = true;
+        }
 ?>
 <section class="resource-box my-5">
     <div class="container">

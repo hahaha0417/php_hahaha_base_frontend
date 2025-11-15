@@ -555,7 +555,6 @@
 
 #about-glass {
     position: relative;
-    padding: 80px 0;
 }
 
 #about-glass .container{
@@ -564,7 +563,6 @@
 
 .glass-box {
     width: 100%;
-    max-width: 97%;
     border-radius: 20px;
 
     /* ⭐ 重點：半透明紫色玻璃效果 */
@@ -591,3 +589,106 @@
     background: rgba(255,255,255,0.25);
     color: #fff;
 }
+
+.about-section {
+    position: relative;
+}
+
+.about-section .container{
+    max-width: 100% !important;
+}
+
+
+
+.plan-item.experience-item {
+
+    border-radius: 0.75rem;
+    border: 1px solid rgba(0,0,0,.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,.04);
+    transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+}
+
+.plan-item.experience-item:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+
+.plan-text {
+    font-size: 16px;
+    width: 100%;
+    background-color: #88888888;
+}
+
+.plan-item {
+    position: relative;
+    padding: 0.25rem 0;
+    border-radius: 4px;
+    cursor: default;
+    transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+}
+
+.plan-item:hover {
+    transform: translateX(6px);
+    background-color: #c9ffc986;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.plan-num {
+    width: 76px;
+    height: 76px;
+    font-size: 16px;
+  
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.plan-item:hover .plan-num {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 4px rgba(13,253,110,.25); /* Bootstrap primary 色系外框 */
+}
+
+
+.circle-row {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* 基本圓：暗色、深灰描邊 */
+.circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #1b1b1b; 
+    border: 3px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    font-size: 44px;        /* ⭐ icon 大小 */
+    color: #c9ffc9;         /* ⭐ 綠色 icon，一定看得見 */
+    transition: .25s;
+}
+
+/* ICON 顏色修正：亮綠球體時用深色 ICON 才會看見 */
+.circle.active i,
+.circle:hover i {
+    color: #043a29;         /* 深綠 ICON 避免消失 */
+}
+
+/* ⭐ 亮綠球體（和你圖片 identically 一樣風格） */
+.circle.active,
+.circle:hover {
+    background: radial-gradient(circle at 30% 30%, 
+        #c9ffc9, 
+        #d9ffd9, 
+        #c9ffc9
+    );
+    border-color: #c9ffc9;
+    box-shadow: 0 0 25px rgba(210,255,210,0.75);
+    transform: scale(1.07);
+}
+
+

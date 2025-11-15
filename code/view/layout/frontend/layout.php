@@ -87,11 +87,14 @@ class layout
     {
         $hahaha_function_base = hahaha_function_base::instance();
 
-        echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('/bootstrap/dist/css/bootstrap.css'));
-        echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('/sweetalert2/dist/sweetalert2.css'));
+        echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('bootstrap/dist/css/bootstrap.css'));
+        echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('sweetalert2/dist/sweetalert2.css'));
 
-        echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('font-awesome/css/font-awesome.css'));
+        // echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('font-awesome/css/font-awesome.css'));
+?>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<?php
         echo $hahaha_function_base->Css($hahaha_function_base->Url_Asset('frontend/css/base.css'));
         echo $hahaha_function_base->Css($hahaha_function_base->Url_Asset('frontend/css/custom.css'));
         echo $hahaha_function_base->Css($hahaha_function_base->Url_Asset('frontend/css/hahaha.css'));
@@ -102,9 +105,9 @@ class layout
     {
         $hahaha_function_base = hahaha_function_base::instance();
 
-        echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('/jquery/dist/jquery.js'));
-        echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('/bootstrap/dist/js/bootstrap.bundle.js'));
-        echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('/sweetalert2/dist/sweetalert2.js'));
+        echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('jquery/dist/jquery.js'));
+        echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('bootstrap/dist/js/bootstrap.bundle.js'));
+        echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('sweetalert2/dist/sweetalert2.js'));
 
 
 

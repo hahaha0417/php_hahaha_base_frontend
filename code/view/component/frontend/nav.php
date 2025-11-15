@@ -25,7 +25,7 @@ class nav
         <div class="container-fluid">
 
 
-            <a class="navbar-brand d-flex " href="#">
+            <a class="navbar-brand d-flex " href="/">
                 <img src="/image/iTW_icon.png" alt="Logo"
                     class="me-2" style="height:32px; width:auto;">
                 <span class="fw-semibold " style="color:#ffffff;">hahaha</span>

@@ -8,6 +8,7 @@ class counter
 {
     use \hahaha\instance;
 
+    public $Initial_ = false;
 	// 建構子
     public function __construct() {
  
@@ -17,9 +18,17 @@ class counter
     {
         $hahaha_function_base = hahaha_function_base::instance();
 
+        if($this->Initial_)
+        {
 ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js"></script>
+<?php 
+
+
+            $this->Initial_ = true;
+        }
+?>
 <div class="container py-5">
     <h1 class="text-center mb-4">
         hahaha
