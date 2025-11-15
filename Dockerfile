@@ -17,7 +17,7 @@ COPY . .
 
 WORKDIR /php_hahaha_base_frontend/batch_file/git
 #我有很多.sh檔，在子資料夾
-RUN find . -type f -name "*.sh" -exec chmod +x "{}" \; -exec sh "{}" \;
+RUN find . -type f -name "*.sh" -exec chmod +x "{}" \;
 RUN sh "git clone.sh"
 # -------------------------------------------
 
