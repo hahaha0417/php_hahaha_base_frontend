@@ -17,7 +17,9 @@ WORKDIR /
 # Copy project
 COPY . /php_hahaha_base_frontend
 
-WORKDIR /php_hahaha_base_frontend/project/app
+WORKDIR /php_hahaha_base_frontend
+
+cd project/app
 
 # Install dependencies
 #RUN composer install --optimize-autoloader --no-dev
