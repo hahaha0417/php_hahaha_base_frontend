@@ -51,7 +51,7 @@ COPY deploy/nginx.conf /etc/nginx/sites-enabled/default
 WORKDIR /var/www/html
 COPY --from=build /php_hahaha_base_frontend .
 
-RUN mkdir -p /var/www/html/storage /var/www/html/bootstrap/cache && \
+RUN mkdir -p /var/www/html/php_hahaha_base_frontend/project/app/storage /var/www/html/php_hahaha_base_frontend/project/app/bootstrap/cache && \
     chown -R www-data:www-data /var/www/html
 
 CMD service php8.2-fpm start && nginx -g "daemon off;"
