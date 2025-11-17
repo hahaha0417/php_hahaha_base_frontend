@@ -18,7 +18,7 @@ class counter
     {
         $hahaha_function_base = hahaha_function_base::instance();
 
-        if($this->Initial_)
+        if(!$this->Initial_)
         {
 ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>

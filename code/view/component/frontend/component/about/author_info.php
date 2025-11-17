@@ -18,7 +18,7 @@ class author_info
     {
         $hahaha_function_base = hahaha_function_base::instance();
 
-        if($this->Initial_)
+        if(!$this->Initial_)
         {
 ?>
 
@@ -65,7 +65,7 @@ class author_info
                 </div>
 
                 <div class="mb-3 col-4">
-                    <label class="form-label">電子信箱 <span class="text-danger"></span></label>
+                    <label class="form-label">手機 <span class="text-danger"></span></label>
                     <input type="phone" class="form-control glass-input" placeholder="輸入電話" value="0916353255" readonly>
                 </div>
             </form>

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Backend\Permission;
+namespace App\Http\Controllers\Backend\Backup;
 
 class Index_Controller extends \hahaha\base_ontroller
 {
@@ -9,10 +9,10 @@ class Index_Controller extends \hahaha\base_ontroller
         $parameter = \hahaha\parameter::instance();
 
         $parameter->page = new \StdClass;
-        $parameter->page->title = "hahaha官網 - 後台 - 權限";
+        $parameter->page->title = "hahaha官網 - 後台 - 備份";
 
-        $file_name = public_path("../../../public/app/[後端]_權限頁.html"); // 存到 public
-        $view = view('backend.permission.index', [
+        $file_name = public_path("../../../public/app/[後端]_備份頁.html"); // 存到 public
+        $view = view('backend.backup.index', [
             'parameter' => $parameter,
         ])->render(); 
 

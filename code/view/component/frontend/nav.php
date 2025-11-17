@@ -88,9 +88,13 @@ class nav
                         <a class="nav-link" href="/about">關於哈哥</a>
                     </li>
 
-                    <!-- 7. Support：單純連結 -->
-                    <li class="nav-item">
+                    <!--  -->
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="https://www.hahaha.com.tw/support/">Support</a>
+                    </li> -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/backend">後台</a>
                     </li>
 
                 </ul>

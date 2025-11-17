@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\Index\Index_Controller as Backend_Index_Index_Controller;
 use App\Http\Controllers\Backend\Table\Index_Controller as Backend_Table_Index_Controller;
 use App\Http\Controllers\Backend\Permission\Index_Controller as Backend_Permission_Index_Controller;
-
+use App\Http\Controllers\Backend\Backup\Index_Controller as Backend_Backup_Index_Controller;
 
 
 
@@ -56,6 +56,16 @@ Route::prefix('backend/permission')
         // '',
     ])->group(function () {
     Route::get('/', [Backend_Permission_Index_Controller::class, "Index"]);
+
+    // -----------------------------------------------------
+
+});
+
+Route::prefix('backend/backup')
+    ->middleware([
+        // '',
+    ])->group(function () {
+    Route::get('/', [Backend_Backup_Index_Controller::class, "Index"]);
 
     // -----------------------------------------------------
 

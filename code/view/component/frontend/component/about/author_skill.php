@@ -18,7 +18,7 @@ class author_skill
     {
         $hahaha_function_base = hahaha_function_base::instance();
 
-        if($this->Initial_)
+        if(!$this->Initial_)
         {
 ?>
 
@@ -54,7 +54,7 @@ class author_skill
                     <ul class="mb-0 ps-4">
                         <li>C++</li>
                         <li>C#</li>
-                        <li>Python - 初學</li>
+                        <li>Python：初學</li>
                     
                     </ul>
                 </div>
@@ -67,7 +67,7 @@ class author_skill
                         <li>Html 5</li>
                         <li>Css</li>
                         <li>Js</li>
-                        <li>Asp.net mvc core - 初學</li>
+                        <li>Asp.net mvc core：初學</li>
                     </ul>
                 </div>
                 <div class="mt-3">
@@ -76,8 +76,8 @@ class author_skill
                     </div>
                     <ul class="mb-0 ps-4">
                         <li>MySQL</li>
-                        <li>SQL Server - 初學</li>
-                        <li>SQLite - 初學</li>
+                        <li>SQL Server：初學</li>
+                        <li>SQLite：初學</li>
                     </ul>
                 </div>
                 <div class="mt-3">
@@ -89,7 +89,7 @@ class author_skill
                         <li>C# Winform</li>
                         <li>Laravel</li>
                         <li>Arduino</li>
-                        <li>Asp.Net Mvc Core - 初學</li>
+                        <li>Asp.Net Mvc Core：初學</li>
 
                     </ul>
                 </div>
@@ -135,6 +135,7 @@ class author_skill
                         <li>C++ Builder XE 13</li>
                         <li>Visual Studio 2026</li>
                         <li>Visual Studio Code</li>
+                        <li>Arduino</li>
                     </ul>
                 </div>
                 <div class="mt-3">

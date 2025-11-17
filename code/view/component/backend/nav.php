@@ -37,7 +37,7 @@ class nav
             <!-- 左側選單 -->
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link active" href="#">Dashboard</a>
                 </li>
 
@@ -59,21 +59,27 @@ class nav
 
                 <li class="nav-item">
                     <a class="nav-link" href="#">商品管理</a>
-                </li>
+                </li> -->
 
             </ul>
 
             <!-- 搜尋 -->
-            <form class="d-flex me-3" role="search">
+            <!-- <form class="d-flex me-3" role="search">
                 <input class="form-control form-control-sm bg-dark text-light border-secondary"
                        type="search" placeholder="搜尋…" style="width:140px;">
-            </form>
+            </form> -->
 
             <!-- 管理員 -->
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
+                    <a class="nav-link " href="/backend/login" >
+                        登入
+                    </a>
+                  
+                </li>
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                        管理員 Admin
+                        hahaha
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
                         <li><a class="dropdown-item" href="#">個人資料</a></li>
@@ -81,7 +87,7 @@ class nav
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">登出</a></li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
 
         </div>

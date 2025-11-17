@@ -18,7 +18,7 @@ class author_link
     {
         $hahaha_function_base = hahaha_function_base::instance();
 
-        if($this->Initial_)
+        if(!$this->Initial_)
         {
 ?>
 

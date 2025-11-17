@@ -56,41 +56,57 @@ class sidebar
 
     </div>
 
-
+    <!-- 第一層 -->
     <a class="nav-link menu-toggle">
         <i class="fa-solid fa-box"></i>
-        <span class="text">商品管理</span>
+        <span class="text">備份</span>
         <i class="menu-arrow fa-solid fa-chevron-right"></i>
     </a>
     <div class="submenu">
 
         <!-- 第二層 -->
-        <a class="nav-link menu-toggle">
+        <a class="nav-link" href="/backend/backup">
             <i class="fa-solid fa-list"></i>
-            <span class="text">商品列表</span>
-            <i class="menu-arrow fa-solid fa-chevron-right"></i>
+            <span class="text">基本</span>
         </a>
-        <div class="submenu">
-
-            <!-- 第三層 -->
-            <a class="nav-link menu-toggle">
-                <i class="fa-solid fa-tags"></i>
-                <span class="text">商品分類</span>
-                <i class="menu-arrow fa-solid fa-chevron-right"></i>
-            </a>
-            <div class="submenu">
-
-                <!-- 第四層 -->
-                <a class="nav-link"><i class="fa-solid fa-circle"></i><span class="text">分類 A</span></a>
-                <a class="nav-link"><i class="fa-solid fa-circle"></i><span class="text">分類 B</span></a>
-                <a class="nav-link"><i class="fa-solid fa-circle"></i><span class="text">分類 C</span></a>
-
-            </div>
-
-        </div>
 
     </div>
+<?php
 
+    // <a class="nav-link menu-toggle">
+    //     <i class="fa-solid fa-box"></i>
+    //     <span class="text">商品管理</span>
+    //     <i class="menu-arrow fa-solid fa-chevron-right"></i>
+    // </a>
+    // <div class="submenu">
+
+    //     <!-- 第二層 -->
+    //     <a class="nav-link menu-toggle">
+    //         <i class="fa-solid fa-list"></i>
+    //         <span class="text">商品列表</span>
+    //         <i class="menu-arrow fa-solid fa-chevron-right"></i>
+    //     </a>
+    //     <div class="submenu">
+
+    //         <!-- 第三層 -->
+    //         <a class="nav-link menu-toggle">
+    //             <i class="fa-solid fa-tags"></i>
+    //             <span class="text">商品分類</span>
+    //             <i class="menu-arrow fa-solid fa-chevron-right"></i>
+    //         </a>
+    //         <div class="submenu">
+
+    //             <!-- 第四層 -->
+    //             <a class="nav-link"><i class="fa-solid fa-circle"></i><span class="text">分類 A</span></a>
+    //             <a class="nav-link"><i class="fa-solid fa-circle"></i><span class="text">分類 B</span></a>
+    //             <a class="nav-link"><i class="fa-solid fa-circle"></i><span class="text">分類 C</span></a>
+
+    //         </div>
+
+    //     </div>
+
+    // </div>
+?>
 
 </div>
 

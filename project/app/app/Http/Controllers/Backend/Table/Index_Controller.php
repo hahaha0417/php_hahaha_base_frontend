@@ -14,7 +14,7 @@ class Index_Controller extends \hahaha\base_ontroller
         $file_name = public_path("../../../public/app/[後端]_Table.html"); // 存到 public
         $view = view('backend.table.base', [
             'parameter' => $parameter,
-        ]);
+        ])->render(); 
 
         $this->hahaha($view, $file_name);
 
@@ -33,7 +33,7 @@ class Index_Controller extends \hahaha\base_ontroller
         $file_name = public_path("../../../public/app/[後端]_Table_編輯.html"); // 存到 public
         $view = view('backend.table.edit', [
             'parameter' => $parameter,
-        ]);
+        ])->render(); 
 
         $this->hahaha($view, $file_name);
 
@@ -55,7 +55,7 @@ class Index_Controller extends \hahaha\base_ontroller
         $file_name = public_path("../../../public/app/[後端]_Table_Modal.html"); // 存到 public
         $view = view('backend.table.modal', [
             'parameter' => $parameter,
-        ]);
+        ])->render(); 
 
         $this->hahaha($view, $file_name);
 

@@ -18,7 +18,7 @@ class author_education
     {
         $hahaha_function_base = hahaha_function_base::instance();
 
-        if($this->Initial_)
+        if(!$this->Initial_)
         {
 ?>
 
@@ -36,58 +36,25 @@ class author_education
         </h1>
 
         <div class="plan-list">
+            
+            
+            
+            
+            
             <div class="plan-item experience-item p-3 p-md-4 mb-3">
                 <div class="d-flex align-items-center mb-2">
                     <div class="plan-num rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center ms-2 me-3">
-                        國小
+                        碩士
                     </div>
                     <div>
-                        <div class="fw-bold fs-5">國立永和國小</div>
-                        <div class="text-muted small">1991 / 9 ~ 1993 / 6</div>
+                        <div class="fw-bold fs-5">國立中山大學</div>
+                        <div class="text-muted small">2009 / 9 ~ 2013 / 1</div>
                     </div>
                 </div>
 
               
             </div>
-            <div class="plan-item experience-item p-3 p-md-4 mb-3">
-                <div class="d-flex align-items-center mb-2">
-                    <div class="plan-num rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center ms-2 me-3">
-                        國小
-                    </div>
-                    <div>
-                        <div class="fw-bold fs-5">國立武漢國小</div>
-                        <div class="text-muted small">1993 / 9 ~ 1997 / 6</div>
-                    </div>
-                </div>
 
-              
-            </div>
-            <div class="plan-item experience-item p-3 p-md-4 mb-3">
-                <div class="d-flex align-items-center mb-2">
-                    <div class="plan-num rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center ms-2 me-3">
-                        國中
-                    </div>
-                    <div>
-                        <div class="fw-bold fs-5">國立龍潭國國中</div>
-                        <div class="text-muted small">1997 / 9 ~ 2000 / 6</div>
-                    </div>
-                </div>
-
-              
-            </div>
-            <div class="plan-item experience-item p-3 p-md-4 mb-3">
-                <div class="d-flex align-items-center mb-2">
-                    <div class="plan-num rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center ms-2 me-3">
-                        高中
-                    </div>
-                    <div>
-                        <div class="fw-bold fs-5">國立內壢高中</div>
-                        <div class="text-muted small">2000 / 9 ~ 2003 / 6</div>
-                    </div>
-                </div>
-
-              
-            </div>
             <div class="plan-item experience-item p-3 p-md-4 mb-3">
                 <div class="d-flex align-items-center mb-2">
                     <div class="plan-num rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center ms-2 me-3">
@@ -101,14 +68,57 @@ class author_education
 
               
             </div>
+
             <div class="plan-item experience-item p-3 p-md-4 mb-3">
                 <div class="d-flex align-items-center mb-2">
                     <div class="plan-num rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center ms-2 me-3">
-                        碩士
+                        高中
                     </div>
                     <div>
-                        <div class="fw-bold fs-5">國立中山大學</div>
-                        <div class="text-muted small">2009 / 9 ~ 2013 / 1</div>
+                        <div class="fw-bold fs-5">國立內壢高中</div>
+                        <div class="text-muted small">2000 / 9 ~ 2003 / 6</div>
+                    </div>
+                </div>
+
+              
+            </div>
+
+            <div class="plan-item experience-item p-3 p-md-4 mb-3">
+                <div class="d-flex align-items-center mb-2">
+                    <div class="plan-num rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center ms-2 me-3">
+                        國中
+                    </div>
+                    <div>
+                        <div class="fw-bold fs-5">國立龍潭國國中</div>
+                        <div class="text-muted small">1997 / 9 ~ 2000 / 6</div>
+                    </div>
+                </div>
+
+              
+            </div>
+
+            <div class="plan-item experience-item p-3 p-md-4 mb-3">
+                <div class="d-flex align-items-center mb-2">
+                    <div class="plan-num rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center ms-2 me-3">
+                        國小
+                    </div>
+                    <div>
+                        <div class="fw-bold fs-5">國立武漢國小</div>
+                        <div class="text-muted small">1993 / 9 ~ 1997 / 6</div>
+                    </div>
+                </div>
+
+              
+            </div>
+
+            <div class="plan-item experience-item p-3 p-md-4 mb-3">
+                <div class="d-flex align-items-center mb-2">
+                    <div class="plan-num rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center ms-2 me-3">
+                        國小
+                    </div>
+                    <div>
+                        <div class="fw-bold fs-5">國立永和國小</div>
+                        <div class="text-muted small">1991 / 9 ~ 1993 / 6</div>
                     </div>
                 </div>
 
