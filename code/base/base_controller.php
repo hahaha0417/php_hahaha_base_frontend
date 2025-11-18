@@ -14,7 +14,7 @@ class base_ontroller
     public function __construct() 
     {
  
-    } 
+    }   
     //
 
     public function hahaha($view, $file_name) 
