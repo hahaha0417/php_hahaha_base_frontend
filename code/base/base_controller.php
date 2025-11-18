@@ -20,7 +20,7 @@ class base_ontroller
         $dir = dirname($file_name);
 
         if (!is_dir($dir)) {
-            mkdir($dir, 0755, true);
+            mkdir($dir, 0777, true);
         }
 
         File::put($file_name, $view);
