@@ -50,12 +50,169 @@ use hahaha\package\backup\base\env\env as define_env;
 
                         </div>
                     </div>
-                    <select id="category" class="form-control bg-dark text-light border-secondary {{ define_key::LIST }}" style="overflow-y: auto;" size="10" multiple>
+                    <div class="open-select-container">
+
+                        <div class="open-select-options" id="openList">
+                            @php
+                                // $name = $row[define_key::NAME];
+                                // $state = $row[define_key::STATE];
+                                $name = "hahaha";
+                                $state = "無";
+
+                                $color = "#c9c9ff";
+                                if($state == "備份成功" || $state == "還原成功") $color = "#c9ffc9";
+                                if($state == "備份失敗" || $state == "還原失敗") $color = "#ffc9c9";
+                            @endphp
+
+                            <div class="open-select-option row"
+                                data-value="{{ $name }}"
+                                data-name="{{ $name }}"
+                                data-state="{{ $state }}"
+                                data-color="{{ $color }}">
+
+                                <div class="col-6">hahaha</div>
+                                <div class="col-1">|</div>
+                                <div class="col-5" style="color:{{ $color }};">hahaha</div>
+                            </div>
+                            <div class="open-select-option row"
+                                data-value="{{ $name }}"
+                                data-name="{{ $name }}"
+                                data-state="{{ $state }}"
+                                data-color="{{ $color }}">
+
+                                <div class="col-6">hehehe</div>
+                                <div class="col-1">|</div>
+                                <div class="col-5" style="color:{{ $color }};">hehehe</div>
+                            </div>
+                            <div class="open-select-option row"
+                                data-value="{{ $name }}"
+                                data-name="{{ $name }}"
+                                data-state="{{ $state }}"
+                                data-color="{{ $color }}">
+
+                                <div class="col-6">hohoho</div>
+                                <div class="col-1">|</div>
+                                <div class="col-5" style="color:{{ $color }};">hohoho</div>
+                            </div>
+                            <div class="open-select-option row"
+                                data-value="{{ $name }}"
+                                data-name="{{ $name }}"
+                                data-state="{{ $state }}"
+                                data-color="{{ $color }}">
+
+                                <div class="col-6">hihihi</div>
+                                <div class="col-1">|</div>
+                                <div class="col-5" style="color:{{ $color }};">hihihi</div>
+                            </div>
+                            <div class="open-select-option row"
+                                data-value="{{ $name }}"
+                                data-name="{{ $name }}"
+                                data-state="{{ $state }}"
+                                data-color="{{ $color }}">
+
+                                <div class="col-6">huhuhu</div>
+                                <div class="col-1">|</div>
+                                <div class="col-5" style="color:{{ $color }};">huhuhu</div>
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="openSelectValue">
+                    </div>
+
+                    <style>
+                        .open-select-container {
+                            width: 100%;
+                            color: #fff;
+                            font-size: 15px;
+                        }
+
+                        .open-select-title {
+                            padding: 12px;
+                            background: #222;
+                            border: 1px solid #444;
+                            border-radius: 6px;
+                            margin-bottom: 6px;
+                        }
+
+                        .open-select-options {
+                            background: #222;
+                            border: 1px solid #444;
+                            border-radius: 6px;
+
+                            /* ⭐ 你的需求：固定高度 + 捲軸 */
+                            max-height: 220px;
+                            overflow-y: auto;
+                            /* ⭐ 修正水平捲軸 BUG */
+                            min-width: 0;
+
+                            /* 美化捲軸 */
+                            scrollbar-width: thin;
+                            scrollbar-color: #666 #222;
+                        }
+
+                        .open-select-option {
+                            padding: 10px 12px;
+                            border-bottom: 1px solid #333;
+                            cursor: pointer;
+                        }
+
+                        .open-select-option.row {
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+
+                        .open-select-option:hover {
+                            background: #333;
+                        }
+
+                        /* ⭐選取高亮 */
+                        .open-select-option.selected {
+                            background: #555;
+                            border-left: 4px solid #00ff95;
+                        }
+
+                        .open-select-option:last-child {
+                            border-bottom: none;
+                        }
+
+                        .opt-line1 {
+                            font-size: 15px;
+                            font-weight: 500;
+                        }
+
+                        .opt-line2 {
+                            margin-top: 2px;
+                            font-size: 14px;
+                        }
+
+
+
+                    </style>
+                    <script>
+                        $(".open-select-option").on("click", function () {
+
+                            $(".open-select-option").removeClass("selected");
+                            $(this).addClass("selected");
+
+                            let name = $(this).data("name");
+                            let state = $(this).data("state");
+                            let color = $(this).data("color");
+
+                            $("#selectedText").html(
+                                name + "<br><span style='color:"+color+"'>："+state+"</span>"
+                            );
+
+                            $("#openSelectValue").val($(this).data("value"));
+
+                            $(".{{ define_key::NAME }}").val($(this).data("value"));
+                        });
+                    </script>
+                    <!-- <select id="category" class="form-control bg-dark text-light border-secondary {{ define_key::LIST }}" style="overflow-y: auto;" size="10" multiple>
                         <option value="hahaha">hahaha</option>
                         <option value="hehehe">hehehe</option>
                         <option value="hohoho">hohoho</option>
 
-                    </select>
+                    </select> -->
                     <div class="row ms-1 mt-3">
                         <button class="btn btn-success col-2 me-1 {{ define_key::BUTTON_ADD }}">
                             <i class="fa-solid fa-circle-plus me-1"></i> 新增
