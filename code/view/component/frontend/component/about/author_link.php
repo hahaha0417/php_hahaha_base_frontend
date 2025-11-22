@@ -62,6 +62,8 @@ class author_link
             <i class="fa-brands fa-blogger-b"></i>
         </a>
 
+        
+
     </div>
 </section>
 

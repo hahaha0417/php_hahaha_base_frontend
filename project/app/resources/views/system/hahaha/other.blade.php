@@ -35,7 +35,7 @@ use hahaha\env\hahaha\other as env_hahaha_other;
 
             <div class="d-flex justify-content-between mt-4">
                 <a href="/system" class=""></a>
-                <button type="submit" class="btn btn-primary button_update">更新</button>
+                <button type="submit" class="btn btn-success button_update">更新</button>
             </div>
 
         </form>

@@ -28,7 +28,7 @@ class author_info
             $this->Initial_ = true;
         }
 ?>
-<section id="about-glass" class="my-5" style="
+<section id="about-glass" class="about_info my-5" style="
     background: url('image/hahaha/橫幅 Logo black.png') center/contain no-repeat;
 ">
     <div class="container d-flex justify-content-center" >
@@ -68,12 +68,38 @@ class author_info
                     <label class="form-label">手機 <span class="text-danger"></span></label>
                     <input type="phone" class="form-control glass-input" placeholder="輸入電話" value="0916353255" readonly>
                 </div>
+
+                <!-- Line -->
+                <div class="mb-3 col-4 circle button_qr_code_line" >
+                    <img src="/image/hahaha/line_陳傑琪.jpg" style="width:110px;height:auto;">
+                </div>
+            
             </form>
 
         </div>
 
     </div>
 </section>
+
+
+
+<!-- QR Modal -->
+<div class="modal fade" id="modal_qr_code_line" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark border-secondary">
+            <div class="modal-body text-center">
+            <img id="qrModalImg" src="/image/hahaha/line_陳傑琪.jpg" alt="QR" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var modal_qr_code_line = new bootstrap.Modal(document.getElementById('modal_qr_code_line'));
+    $(`.button_qr_code_line`).click(function() {
+        modal_qr_code_line.show();
+    });
+</script>
 
 
 <?php

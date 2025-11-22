@@ -7,6 +7,60 @@ use hahaha\env\hahaha\other as env_hahaha_other;
 
 @section('content')
     <style>
+    * { box-sizing: border-box; }
+    body { font-family: sans-serif; margin: 0; }
+
+    .carousel {
+        position: relative;
+        width: 600px;
+        height: 350px;
+        margin: 30px auto;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+    }
+
+    .slide {
+        min-width: 100%;
+        transition: opacity 0.5s;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+
+    .nav button {
+        background-color: rgba(0,0,0,0.5);
+        border: none;
+        color: #fff;
+        font-size: 2em;
+        padding: 5px 15px;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+
+    .nav button:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+    </style>
+    <style>
         .header-wrap {
             position: relative;     /* 讓子元素可以使用絕對定位 */
             width: 100%;
@@ -248,63 +302,43 @@ use hahaha\env\hahaha\other as env_hahaha_other;
 
         <?php \hahaha\view\frontend\component\rect_image_hover::Instance()->view(); ?>
 
-        
+        <div id="backToTop">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none"
+                stroke="#c9ffc9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+
+                <!-- 最上層：位置最高 -->
+                <path d="M6 8 L12 2 L18 8" />
+
+                <!-- 中層：往下拉 8px -->
+                <path d="M6 15 L12 9 L18 15" />
+
+                <!-- 最下層：再往下 8px -->
+                <path d="M6 22 L12 16 L18 22" />
+
+            </svg>
+        </div>
     </main>
 
+    <script>
+        const backToTop = document.getElementById('backToTop');
+
+        // 顯示/隱藏按鈕
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        // 點擊 → 捲動到最上方
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
     
-
-    <style>
-    * { box-sizing: border-box; }
-    body { font-family: sans-serif; margin: 0; }
-
-    .carousel {
-        position: relative;
-        width: 600px;
-        height: 350px;
-        margin: 30px auto;
-        overflow: hidden;
-        border-radius: 12px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-    .slides {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-        width: 100%;
-    }
-
-    .slide {
-        min-width: 100%;
-        transition: opacity 0.5s;
-    }
-
-    .slide img {
-        width: 100%;
-        height: 350px;
-        object-fit: cover;
-    }
-
-    .nav {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transform: translateY(-50%);
-    }
-
-    .nav button {
-        background-color: rgba(0,0,0,0.5);
-        border: none;
-        color: #fff;
-        font-size: 2em;
-        padding: 5px 15px;
-        cursor: pointer;
-        border-radius: 6px;
-    }
-
-    .nav button:hover {
-        background-color: rgba(0,0,0,0.8);
-    }
-    </style>
 @endsection

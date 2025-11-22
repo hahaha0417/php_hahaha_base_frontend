@@ -12,6 +12,10 @@
     <?php \hahaha\view\frontend\component\author_experience::Instance()->view(); ?>
     <!-- 技能 -->
     <?php \hahaha\view\frontend\component\author_skill::Instance()->view(); ?>
+    <!-- 右側按鈕 -->
+    <?php \hahaha\view\frontend\component\author_right_button::Instance()->view(); ?>
+
+    
 
 
 

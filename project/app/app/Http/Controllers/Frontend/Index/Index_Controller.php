@@ -60,4 +60,23 @@ class Index_Controller extends \hahaha\base_ontroller
 
         return $view;
     }
+
+    public function Contact()
+    {
+        $parameter = \hahaha\parameter::Instance();
+
+        $parameter->page = new \StdClass;
+        $parameter->page->title = "hahaha官網";
+
+        $file_name = public_path("../../../public/app/[前端]_聯絡.html"); // 存到 public
+        $view = view('frontend.index.contact', [
+            'parameter' => $parameter,
+        ])->render(); 
+
+        $this->hahaha($view, $file_name);
+
+        
+
+        return $view;
+    }
 }

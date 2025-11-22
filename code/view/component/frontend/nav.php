@@ -88,6 +88,10 @@ class nav
                         <a class="nav-link" href="/about">關於哈哥</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">聯絡方式</a>
+                    </li>
+
                     <!--  -->
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="https://www.hahaha.com.tw/support/">Support</a>

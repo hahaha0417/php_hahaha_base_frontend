@@ -219,6 +219,10 @@
     visibility:visible !important;
 }
 
+.hahaha-footer {
+    margin-bottom: 20px;
+}
+
 .hahaha-footer a {
     color: #aaa;
     text-decoration: none;
@@ -228,10 +232,10 @@
 }
 
 .hahaha-footer .container {
-    margin-left: 1%;
-    margin-right: 1%;
-    width: 98%;
-    max-width: 98%;
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 100%;
+    max-width: 100%;
 }
 
 .footer-title {
@@ -691,4 +695,205 @@
     transform: scale(1.07);
 }
 
+#floatBtnGroup {
+    position: fixed;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
 
+/* 圓形按鈕 */
+.about-right-button .float-btn {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+
+    background: rgba(190, 255, 190, 0.08); /* 半透明灰 */
+    border: 1px solid rgba(190, 255, 190, 0.25);
+    backdrop-filter: blur(4px);    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;          /* ← 字體改成白色 */
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;   /* ← 取消底線 */
+
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.about-right-button .float-btn:hover {
+    background: rgba(210, 255, 210, 0.18);
+    transform: scale(1.06);
+}
+
+.about-right-button a:hover {
+    text-decoration: none !important;
+    color: #ffffff !important;
+}
+
+.about-right-button a {
+    text-decoration: none !important;
+    color: #ffffff !important;
+}
+
+/* 整個選單固定在右側中間 */
+.hexSideMenu {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 9999;
+}
+
+.hexSideMenu a {
+    text-decoration: none !important;
+    color: #ffffff !important;
+}
+
+/* 六角形按鈕：科技風 */
+.hex-btn {
+    position: relative;
+    width: 80px;
+    height: 60px;
+
+    /* 用 clip-path 畫六角形 */
+    clip-path: polygon(18% 0, 82% 0, 100% 50%, 82% 100%, 18% 100%, 0 50%);
+
+    background: rgba(190, 210, 190, 0.3);              /* 深色半透明底 */
+    border: 1px solid rgba(210, 255, 210, 0.1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #f5f5f5;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+    overflow: hidden;
+}
+
+/* 斜切感：整個稍微傾斜 */
+.hex-btn {
+    transform: skewX(-10deg);
+}
+.hex-btn span,
+.hex-btn {
+    /* 讓文字看起來不要歪：如果你想修正可再包 span 反向 skew 回去 */
+}
+
+/* 發光邊框效果（外圈） */
+.hex-btn::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    clip-path: inherit;
+    background: linear-gradient(
+        120deg,
+        rgba(190, 255, 190, 0.5),
+        rgba(210, 255, 210, 0.1)
+    );
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: -1;
+}
+
+/* 內部淡淡的掃光（hover） */
+.hex-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.15),
+        transparent
+    );
+    transform: skewX(-20deg);
+    opacity: 0;
+    transition: 0.35s ease;
+}
+
+/* 滑鼠移過去：變亮＋光暈掃過去 */
+.hex-btn:hover {
+    background: rgba(190, 255, 190, 0.5);
+    box-shadow: 0 0 18px rgba(130, 255, 200, 0.4);
+    transform: skewX(-10deg) translateX(-4px);
+}
+
+.hex-btn:hover::before {
+    opacity: 1;
+}
+
+.about-right-button .hex-btn:hover::after {
+    opacity: 1;
+    left: 120%;
+}
+
+/* 被選中的 active 狀態：常駐亮、科技綠底 */
+.hex-btn.active {
+    background: linear-gradient(
+        135deg,
+        rgba(210, 255, 210, 0.5),
+        rgba(190, 255, 190, 0.5)
+    );
+    box-shadow: 0 0 22px rgba(190, 255, 190, 0.7);
+    color: #ffffff;
+}
+.about-right-button .hex-btn.active::before {
+    opacity: 0.8;
+}
+
+#backToTop {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(160, 240, 200, 0.5);
+    backdrop-filter: blur(4px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #ffffff;
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.25s;
+    opacity: 0;           /* 初始隱藏 */
+    pointer-events: none; /* 避免擋點擊 */
+}
+
+/* 滾動後顯示 */
+#backToTop.show {
+    opacity: 1;
+    pointer-events: auto; /* 可以點擊 */
+}
+
+/* hover 光暈 */
+#backToTop:hover {
+    box-shadow: 0 0 22px rgba(130, 255, 200, 0.7);
+    background: rgba(160, 240, 200, 0.15);
+    transform: scale(1.08);
+}
