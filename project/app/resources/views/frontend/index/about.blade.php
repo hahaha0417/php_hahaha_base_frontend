@@ -3,15 +3,15 @@
 
 @section('content')
     <!-- 資訊 -->
-    <?php \hahaha\view\frontend\component\author_info::instance()->view(); ?>
+    <?php \hahaha\view\frontend\component\author_info::Instance()->view(); ?>
     <!-- 連結 -->
-    <?php \hahaha\view\frontend\component\author_link::instance()->view(); ?>
+    <?php \hahaha\view\frontend\component\author_link::Instance()->view(); ?>
     <!-- 學歷 -->
-    <?php \hahaha\view\frontend\component\author_education::instance()->view(); ?>
+    <?php \hahaha\view\frontend\component\author_education::Instance()->view(); ?>
     <!-- 經歷 -->
-    <?php \hahaha\view\frontend\component\author_experience::instance()->view(); ?>
+    <?php \hahaha\view\frontend\component\author_experience::Instance()->view(); ?>
     <!-- 技能 -->
-    <?php \hahaha\view\frontend\component\author_skill::instance()->view(); ?>
+    <?php \hahaha\view\frontend\component\author_skill::Instance()->view(); ?>
 
 
 

@@ -3,10 +3,10 @@
     <head>
         
 
-        <?php \hahaha\view\layout\backend\layout::instance()->view_meta(); ?>
+        <?php \hahaha\view\layout\backend\layout::Instance()->view_meta(); ?>
 
-        <?php \hahaha\view\layout\backend\layout::instance()->view_css(); ?>
-        <?php \hahaha\view\layout\backend\layout::instance()->view_js(); ?>
+        <?php \hahaha\view\layout\backend\layout::Instance()->view_css(); ?>
+        <?php \hahaha\view\layout\backend\layout::Instance()->view_js(); ?>
         
         <style>
             body {
@@ -28,7 +28,7 @@
 
 
         
-        <?php \hahaha\view\layout\backend\layout::instance()->view_js_page(); ?>
+        <?php \hahaha\view\layout\backend\layout::Instance()->view_js_page(); ?>
 
         <footer class="bg-dark text-light py-3 fixed-bottom">
             <div class="container d-flex justify-content-between align-items-center">

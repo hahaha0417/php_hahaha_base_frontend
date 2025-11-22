@@ -6,7 +6,7 @@ class Index_Controller extends \hahaha\base_ontroller
 {
     public function Base()
     {
-        $parameter = \hahaha\parameter::instance();
+        $parameter = \hahaha\parameter::Instance();
 
         $parameter->page = new \StdClass;
         $parameter->page->title = "hahaha官網 - 後台 - Table - Base";
@@ -25,7 +25,7 @@ class Index_Controller extends \hahaha\base_ontroller
 
     public function Edit($id)
     {
-        $parameter = \hahaha\parameter::instance();
+        $parameter = \hahaha\parameter::Instance();
 
         $parameter->page = new \StdClass;
         $parameter->page->title = "hahaha官網 - 後台 - Table - Base - 編輯";
@@ -47,7 +47,7 @@ class Index_Controller extends \hahaha\base_ontroller
     // ----------------------------------------------------------- 
     public function Modal()
     {
-        $parameter = \hahaha\parameter::instance();
+        $parameter = \hahaha\parameter::Instance();
 
         $parameter->page = new \StdClass;
         $parameter->page->title = "hahaha官網 - 後台 - Table - Modal";

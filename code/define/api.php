@@ -1,13 +1,12 @@
 <?php
 
-namespace hahaha\package\backup\base\define;
+namespace hahaha\define;
 
 
 /*
 
-use hahaha\package\backup\base\define\api as define_api;
-use hahaha\package\backup\base\define\api as base_define_api;
-use hahaha\package\backup\base\define\api as backup_base_define_api;
+use hahaha\define\api as api;
+use hahaha\define\api as define_api;
 
 */
 
@@ -18,8 +17,9 @@ class api
     const BACKEND_BACKUP_BASE_DELETE = "/api/backend/backup/base/delete";
     const BACKEND_BACKUP_BASE_BACKUP = "/api/backend/backup/base/backup";
     const BACKEND_BACKUP_BASE_RESTORE = "/api/backend/backup/base/restore";
+    // ---------------------------------------------- 
 
-
+    const SYSTEM_ENV_HAHAHA_OTHER_UPDATE = "/system/env/hahaha/other/update";
     // ---------------------------------------------- 
     const RESULT = "result";
     const API = "api";

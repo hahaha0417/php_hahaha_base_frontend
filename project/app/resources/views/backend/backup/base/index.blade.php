@@ -9,7 +9,7 @@ use hahaha\package\backup\base\env\env as define_env;
 
 @section('content')
     <div class="layout mb-5">
-        <?php \hahaha\view\component\backend\sidebar::instance()->view(); ?>
+        <?php \hahaha\view\component\backend\sidebar::Instance()->view(); ?>
 
         <div class="content">
 

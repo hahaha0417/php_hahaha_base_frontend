@@ -6,7 +6,7 @@ class Index_Controller extends \hahaha\base_ontroller
 {
     public function Index()
     {
-        $parameter = \hahaha\parameter::instance();
+        $parameter = \hahaha\parameter::Instance();
 
         $parameter->page = new \StdClass;
         $parameter->page->title = "hahaha官網 - 後台 - 權限";

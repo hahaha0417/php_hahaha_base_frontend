@@ -1,3 +1,7 @@
+@php
+use hahaha\env\hahaha\other as env_hahaha_other;
+@endphp
+
 @extends('frontend.layout')
 
 
@@ -240,9 +244,9 @@
 
         </div>
 
-        <?php \hahaha\view\frontend\component\counter::instance()->view(); ?>
+        <?php \hahaha\view\frontend\component\counter::Instance()->view(); ?>
 
-        <?php \hahaha\view\frontend\component\rect_image_hover::instance()->view(); ?>
+        <?php \hahaha\view\frontend\component\rect_image_hover::Instance()->view(); ?>
 
         
     </main>

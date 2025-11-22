@@ -20,7 +20,7 @@ class nav
     <div class="container-fluid">
 
         <!-- LOGO + 標題 -->
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="/backend">
             <img src="/image/iTW_icon.png" alt="Logo"
                  class="me-2" style="height:32px; width:auto;">
             <span class="fw-semibold">後台管理系統</span>
@@ -39,12 +39,17 @@ class nav
 
                 <!-- <li class="nav-item">
                     <a class="nav-link active" href="#">Dashboard</a>
+                </li> -->
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/">首頁</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">訂單管理</a>
+                    <a class="nav-link" href="/system">系統</a>
                 </li>
 
+                <!--
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                         會員管理

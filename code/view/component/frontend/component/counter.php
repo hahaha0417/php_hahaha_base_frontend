@@ -3,6 +3,7 @@
 namespace hahaha\view\frontend\component;
 
 use hahaha\function_base as hahaha_function_base;
+use hahaha\env\hahaha\other as env_hahaha_other;
 
 class counter
 {
@@ -16,7 +17,7 @@ class counter
     // 計數動畫(到位置才跳)
     public function view()
     {
-        $hahaha_function_base = hahaha_function_base::instance();
+        $hahaha_function_base = hahaha_function_base::Instance();
 
         if(!$this->Initial_)
         {
@@ -41,7 +42,7 @@ class counter
     <div class="row text-center">
         <div class="col-4">
             <div class="counter-box p-4">
-                <div class="display-5 fw-bold counter" data-num="15">0</div>
+                <div class="display-5 fw-bold counter" data-num="<?php echo env_hahaha_other::COUNT_CODE_NAME; ?>">0</div>
                 <p class="mb-0">hahaha</p>
             </div>
 
@@ -50,7 +51,7 @@ class counter
 
         <div class="col-4">
             <div class="counter-box p-4">
-                <div class="display-5 fw-bold counter" data-num="38">0</div>
+                <div class="display-5 fw-bold counter" data-num="<?php echo env_hahaha_other::COUNT_WORK; ?>">0</div>
                 <p class="mb-0">hehehe</p>
             </div>
 
@@ -59,7 +60,7 @@ class counter
 
         <div class="col-4">
             <div class="counter-box p-4">
-                <div class="display-5 fw-bold counter" data-num="976">0</div>
+                <div class="display-5 fw-bold counter" data-num="<?php echo env_hahaha_other::COUNT_ADDITIONAL; ?>">0</div>
                 <p class="mb-0">hohoho</p>
             </div>
 

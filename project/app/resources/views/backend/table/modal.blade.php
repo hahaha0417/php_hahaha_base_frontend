@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="layout mb-5">
-        <?php \hahaha\view\component\backend\sidebar::instance()->view(); ?>
+        <?php \hahaha\view\component\backend\sidebar::Instance()->view(); ?>
 
         <div class="content">
 

@@ -18,6 +18,7 @@ class base_ontroller
     {
         // render.com不能寫入
         // 存成檔案
+        
         // $dir = dirname($file_name);
 
         // if (!is_dir($dir)) {

@@ -3,23 +3,23 @@
     <head>
         
 
-        <?php \hahaha\view\layout\backend\layout::instance()->view_meta(); ?>
+        <?php \hahaha\view\layout\backend\layout::Instance()->view_meta(); ?>
 
-        <?php \hahaha\view\layout\backend\layout::instance()->view_css(); ?>
-        <?php \hahaha\view\layout\backend\layout::instance()->view_js(); ?>
+        <?php \hahaha\view\layout\backend\layout::Instance()->view_css(); ?>
+        <?php \hahaha\view\layout\backend\layout::Instance()->view_js(); ?>
         
     </head>
     <body class="bg-dark text-light">
-        <?php \hahaha\view\component\backend\nav::instance()->view(); ?>
+        <?php \hahaha\view\component\backend\nav::Instance()->view(); ?>
 
         
         
         <!-- Hero -->
         @yield('content')
 
-        <?php \hahaha\view\component\backend\footer::instance()->view(); ?>
+        <?php \hahaha\view\component\backend\footer::Instance()->view(); ?>
         
         
-        <?php \hahaha\view\layout\backend\layout::instance()->view_js_page(); ?>
+        <?php \hahaha\view\layout\backend\layout::Instance()->view_js_page(); ?>
     </body>
 </html>

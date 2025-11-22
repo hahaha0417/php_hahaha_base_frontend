@@ -97,6 +97,10 @@ class nav
                         <a class="nav-link" href="/backend">後台</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="/system">系統</a>
+                    </li>
+
                 </ul>
 
                 <!-- ⭐ 右邊登入按鈕（用 ms-auto 推到右側） -->

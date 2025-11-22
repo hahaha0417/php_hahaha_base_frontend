@@ -16,7 +16,7 @@ class author_info
     // 計數動畫(到位置才跳)
     public function view()
     {
-        $hahaha_function_base = hahaha_function_base::instance();
+        $hahaha_function_base = hahaha_function_base::Instance();
 
         if(!$this->Initial_)
         {

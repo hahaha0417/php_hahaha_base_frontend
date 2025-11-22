@@ -27,7 +27,7 @@ class layout
     // -----------------------------------------
     public function view($content)
     {
-        $parameter = \hahaha\parameter::instance();
+        $parameter = \hahaha\parameter::Instance();
 
         ?>
 <!DOCTYPE html>
@@ -71,21 +71,21 @@ class layout
     // meta
     public function view_meta()
     {
-        $parameter = \hahaha\parameter::instance();
-        $hahaha_function_base = hahaha_function_base::instance();
+        $parameter = \hahaha\parameter::Instance();
+        $hahaha_function_base = hahaha_function_base::Instance();
 ?>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title><?php echo $parameter->page->title; ?></title>
-
+        <meta name="_token" content="<?php echo csrf_token(); ?>" />
 <?php
     }
 
     // css
     public function view_css()
     {
-        $hahaha_function_base = hahaha_function_base::instance();
+        $hahaha_function_base = hahaha_function_base::Instance();
 
         echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('bootstrap/dist/css/bootstrap.css'));
         echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('sweetalert2/dist/sweetalert2.css'));
@@ -103,7 +103,7 @@ class layout
     // js
     public function view_js()
     {
-        $hahaha_function_base = hahaha_function_base::instance();
+        $hahaha_function_base = hahaha_function_base::Instance();
 
         echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('jquery/dist/jquery.js'));
         echo $hahaha_function_base->Js($hahaha_function_base->Url_Plugin('bootstrap/dist/js/bootstrap.bundle.js'));
@@ -116,7 +116,7 @@ class layout
 
     public function view_js_page()
     {
-        $hahaha_function_base = hahaha_function_base::instance();
+        $hahaha_function_base = hahaha_function_base::Instance();
 
 
 
@@ -137,7 +137,7 @@ class layout
     // 開始
     public function view_begin()
     {
-        // $view_block_header = view_block_header::instance()->initial();
+        // $view_block_header = view_block_header::Instance()->initial();
         
         // $view_block_header->view();
         
@@ -167,7 +167,7 @@ class layout
     // 結束
     public function view_end()
     {
-        // $view_block_footer = view_block_footer::instance()->initial();
+        // $view_block_footer = view_block_footer::Instance()->initial();
         
         // $view_block_footer->view();
         

@@ -31,5 +31,8 @@ use App\Http\Controllers\Frontend\Index\Index_Controller as Frontend_Index_Index
 
 // });
 
+// 靜態
 include_once __DIR__ . "/web/frontend.php";
 include_once __DIR__ . "/web/backend.php";
+// 設定
+include_once __DIR__ . "/web/system.php";
