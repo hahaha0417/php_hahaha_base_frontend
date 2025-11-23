@@ -11,7 +11,7 @@ if (file_exists($maintenance = __DIR__.'/../../project/appㄉ/storage/framework/
 }
 
 // Register the Composer autoloader...
-require __DIR__.'/../../project/appㄉ/vendor/autoload.php';
+require __DIR__.'/../../project/app2/vendor/autoload.php';
 
 // --------------------------------------------------------------------------
 // hahaha 初始化
