@@ -80,7 +80,7 @@ class footer
         <hr class="border-gray-700 my-4" />
 
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-gray-400 text-sm">
-            <div>© 2025 hahaha. All Rights Reserved.</div>
+            <div>© 2025 hahaha Company</div>
             <div class="footer-links mt-2 mt-md-0">
                 <a href="#">隱私權政策</a>
                 <span class="mx-2">|</span>

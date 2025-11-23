@@ -1,16 +1,20 @@
+@php
+use hahaha\function_base as hahaha_function_base;
+$hahaha_function_base = hahaha_function_base::Instance();
+@endphp
 @extends('frontend.layout')
 
 
 @section('content')
 
-
+    <!-- 沒營養，不打包 -->
     <section id="contact_map" class="about_info my-5">
         <div class="container">
 
             <div class="row justify-content-center align-items-start">
 
                 <!-- 左側：頭像 + 字 -->
-                <div class="col-12 col-md-5 text-center mb-4">
+                <div class="col-12 col-md-5 text-center mb-4 mt-5">
                     <img src="/image/hahaha/hahaha.jpg"
                         style="width:222px;height:auto;border-radius:8px;">
                     <h2 class="mt-3 fw-bold text-white">陳傑琪 (hahaha)</h2>
@@ -30,6 +34,19 @@
         </div>
     </section> 
 
+    
+    <!-- 沒營養，不打包 -->
+    <section id="contact_chart" class="about_info my-5">
+        <div class="container">
+
+            <div class="row justify-content-center align-items-start">
+                <div class="chart_gauge" style="width: 600px;height:400px;"></div>
+            </div>
+
+        </div>
+    </section> 
+
+    <!-- // ----------------------------------------------------------------- -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
         crossorigin=""/>
@@ -48,86 +65,19 @@
         }
     </style>
 
-
+    <?php echo $hahaha_function_base->Js($hahaha_function_base->Url_Asset('leaflet/leaflet_map_test.js')); ?>
     <script>
-        // Google底圖連接網址：
-
-        // 1. Google道路圖
-        // http://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z} 
-
-        // 2. Google地形+道路圖
-        // http://mt0.google.com/vt/lyrs=p&hl=en&x={x}&y={y}&z={z}
-
-        // 3. Google道路（白色道路）
-        // http://mt0.google.com/vt/lyrs=r&hl=en&x={x}&y={y}&z={z}
-
-        // 4. Google衛星（無道路圖）
-        // http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}
-
-        // 5. Google地形
-        // http://mt0.google.com/vt/lyrs=t&hl=en&x={x}&y={y}&z={z}
-
-        // 6. Google衛星+道路圖
-        // http://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z}
-
-        // 7 leaflet
-        // https://tile.openstreetmap.org/{z}/{x}/{y}.png
-
-        // 8 國土測繪中心
-        // https://wmts.nlsc.gov.tw/wmts/EMAP/default/{z}/{x}/{y}.png
-        var url_maps = {
-            "Google道路圖": L.tileLayer("http://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}", {
-                maxZoom: 19,
-                attribution: "Google道路圖",
-            }),
-            "Google地形 + 道路圖": L.tileLayer("http://mt0.google.com/vt/lyrs=p&hl=en&x={x}&y={y}&z={z}", {
-                maxZoom: 19,
-                attribution: "Google地形 + 道路圖",
-            }),
-            "Google道路（白色道路）": L.tileLayer("http://mt0.google.com/vt/lyrs=r&hl=en&x={x}&y={y}&z={z}", {
-                maxZoom: 19,
-                attribution: "Google道路（白色道路）",
-            }),
-            "Google衛星（無道路圖）": L.tileLayer("http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}", {
-                maxZoom: 19,
-                attribution: "Google衛星（無道路圖）",
-            }),
-            "Google地形": L.tileLayer("http://mt0.google.com/vt/lyrs=t&hl=en&x={x}&y={y}&z={z}", {
-                maxZoom: 19,
-                attribution: "Google地形",
-            }),
-            "Google衛星 + 道路圖": L.tileLayer("http://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z}", {
-                maxZoom: 19,
-                attribution: "Google衛星 + 道路圖",
-            }),
-            "Leaflet": L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-                maxZoom: 19,
-                attribution: "Leaflet",
-            }),
-            "國土測繪中心": L.tileLayer("https://wmts.nlsc.gov.tw/wmts/EMAP/default/{z}/{x}/{y}.png", {
-                maxZoom: 19,
-                attribution: "國土測繪中心",
-            }),
-
-        };
-
-        var map_select = "Google道路圖";
-
+        
 
         const lat = 24.965567;
         const lng = 121.219000;
 
-        var map = L.map('map', {
-            center: [lat, lng], // 台北 101
-            zoom: 19,
-            layers: [url_maps[map_select]]
-        });
-
- 
-
-        // ---4. 加入選單 ---
-        L.control.layers(url_maps).addTo(map);
-
+        let map_ = new leaflet_map_test("map", 
+            "Google道路圖", 
+            lat, 
+            lng
+        );
+        
         var green_icon = L.divIcon({
             className: "",
             html: `
@@ -140,15 +90,36 @@
             iconAnchor: [18, 36]
         });
 
-        L.marker([lat, lng], { icon: green_icon }).addTo(map)
+        L.marker([lat, lng], { icon: green_icon }).addTo(map_.map)
             .bindPopup('hahaha.')
             .openPopup();
 
     
     </script>
+    <!-- // ----------------------------------------------------------------- -->
+    
+    
+    <!-- // ----------------------------------------------------------------- -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/6.0.0/echarts.min.js" 
+    integrity="sha512-4/g9GAdOdTpUP2mKClpKsEzaK7FQNgMjq+No0rX8XZlfrCGtbi4r+T/p5fnacsEC3zIAmHKLJUL7sh3/yVA4OQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- 基底 -->
+    <?php echo $hahaha_function_base->Js($hahaha_function_base->Url_Asset('echart/gauge/echart_gauge_test.js')); ?>
+    
+    <script>
+        // 物件
+        let gauge_v1 = new echart_gauge_test_(".chart_gauge").initial_v1();
+
+        echart_gauge_v1.update(gauge_v1, 0.375);
+        
+    </script>
+    <!-- // ----------------------------------------------------------------- -->
+
+
+
 
     
-
+    
 
     
 @endsection

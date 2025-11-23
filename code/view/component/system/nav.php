@@ -41,7 +41,7 @@ class nav
                     <a class="nav-link active" href="#">Dashboard</a>
                 </li> -->
 
-                <li class="nav-item">
+                <li class="nav-item nav-sep-left">
                     <a class="nav-link" href="/">首頁</a>
                 </li>
 

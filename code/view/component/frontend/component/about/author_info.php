@@ -33,11 +33,11 @@ class author_info
 ">
     <div class="container d-flex justify-content-center" >
 
-        <div class="glass-box p-5 mt-4">
+        <div class="glass-box p-5 mt-8">
 
             <!-- LOGO -->
-            <div class="text-center mb-4">
-                <img src="image/hahaha/hahaha.jpg" style="width:222px;height:auto;">
+            <div class="text-center" > 
+                <img src="image/hahaha/hahaha.jpg" style="width:222px;height:auto;margin-top:100px;">
                 <h2 class="mt-3 fw-bold text-white">陳傑琪(hahaha)</h2>
                 <h5 class="text-white-50">hahaha</h5>
 

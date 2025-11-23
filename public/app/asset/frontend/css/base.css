@@ -897,3 +897,35 @@
     background: rgba(160, 240, 200, 0.15);
     transform: scale(1.08);
 }
+
+.nav-sep {
+    position: relative;
+    padding-right: 16px !important;
+}
+
+.nav-sep::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 16px;
+    background-color: #666;
+}
+
+.nav-sep-left {
+    position: relative;
+    padding-left: 16px !important;
+}
+
+.nav-sep-left::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 16px;
+    background-color: #666; /* 分隔線顏色 */
+}

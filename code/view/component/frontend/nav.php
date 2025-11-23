@@ -88,7 +88,7 @@ class nav
                         <a class="nav-link" href="/about">關於哈哥</a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item me-2">
                         <a class="nav-link" href="/contact">聯絡方式</a>
                     </li>
 
@@ -97,7 +97,7 @@ class nav
                         <a class="nav-link" href="https://www.hahaha.com.tw/support/">Support</a>
                     </li> -->
 
-                    <li class="nav-item">
+                    <li class="nav-item nav-sep-left">
                         <a class="nav-link" href="/backend">後台</a>
                     </li>
 
@@ -110,6 +110,7 @@ class nav
                 <!-- ⭐ 右邊登入按鈕（用 ms-auto 推到右側） -->
                 <div class="ms-auto d-flex align-items-center">
                     <a class="nav-link" href="/login">登入</a>
+                    
                 </div>
 
         
