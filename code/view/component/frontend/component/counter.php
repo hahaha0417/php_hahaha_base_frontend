@@ -14,6 +14,15 @@ class counter
     public function __construct() {
  
     }
+
+    public function reset()
+    {
+        $this->Initial_ = false;
+
+        return $this; 
+        
+    }
+
     // 計數動畫(到位置才跳)
     public function view()
     {
@@ -70,12 +79,12 @@ class counter
 </div>
 <script>
     $('.counter').each(function () {
-        var $this = $(this);
+        var _this = $(this);
 
-        $this.waypoint(function () {
-            var target = $this.data('num');
+        _this.waypoint(function () {
+            var target = _this.data('num');
 
-            $this.animateNumber(
+            _this.animateNumber(
                 { number: target },
                 1500 // 動畫時間
             );
