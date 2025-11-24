@@ -11,14 +11,19 @@ class Index_Controller extends \hahaha\base_ontroller
         $parameter->page = new \StdClass;
         $parameter->page->title = "hahaha官網 - 系統";
 
-        $file_name = public_path("../../../public/app/[續桶]_首頁.html"); // 存到 public
+        $parameter->is_static = true;
+        $file_name = public_path("../../../public/app/[系統]_首頁.html"); // 存到 public
         $view = view('system.index.index', [
             'parameter' => $parameter,
-        ]);
+        ])->render();
 
         $this->hahaha($view, $file_name);
 
-        
+        $parameter->is_static = false;
+        $file_name = public_path("../../../public/app/[系統]_首頁.html"); // 存到 public
+        $view = view('system.index.index', [
+            'parameter' => $parameter,
+        ])->render();
 
         return $view;
     }

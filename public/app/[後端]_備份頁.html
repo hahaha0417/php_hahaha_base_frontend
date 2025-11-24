@@ -6,28 +6,28 @@
                 <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>hahaha官網 - 後台 - 備份</title>
+        <meta name="_token" content="xwSwzQhyPSVUqZe2AUknp8YbT1ACA1MHrZVfAtaV" />
 
 
 
 
 
-
-        <link rel="stylesheet" href="/asset/plugin//bootstrap/dist/css/bootstrap.css?v=1.0.0" type="text/css" />
-<link rel="stylesheet" href="/asset/plugin//sweetalert2/dist/sweetalert2.css?v=1.0.0" type="text/css" />
+        <link rel="stylesheet" href="asset/plugin//bootstrap/dist/css/bootstrap.css?v=1.0.0" type="text/css" />
+<link rel="stylesheet" href="asset/plugin//sweetalert2/dist/sweetalert2.css?v=1.0.0" type="text/css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         
-<link rel="stylesheet" href="/asset/plugin//datatables.net-bs5/css/dataTables.bootstrap5.min.css?v=1.0.0" type="text/css" />
-<link rel="stylesheet" href="/asset/plugin//datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css?v=1.0.0" type="text/css" />
-<link rel="stylesheet" href="/asset/backend/css/base.css?v=1.0.0" type="text/css" />
-<link rel="stylesheet" href="/asset/backend/css/custom.css?v=1.0.0" type="text/css" />
-<link rel="stylesheet" href="/asset/backend/css/hahaha.css?v=1.0.0" type="text/css" />
-        <script type="text/javascript" src="/asset/plugin//jquery/dist/jquery.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/plugin//bootstrap/dist/js/bootstrap.bundle.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/plugin//sweetalert2/dist/sweetalert2.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/plugin//datatables.net/js/jquery.dataTables.min.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/plugin//datatables.net-bs5/js/dataTables.bootstrap5.min.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/plugin//datatables.net-responsive/js/dataTables.responsive.min.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/plugin//datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js?v=1.0.0"></script>
+<link rel="stylesheet" href="asset/plugin//datatables.net-bs5/css/dataTables.bootstrap5.min.css?v=1.0.0" type="text/css" />
+<link rel="stylesheet" href="asset/plugin//datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css?v=1.0.0" type="text/css" />
+<link rel="stylesheet" href="asset/backend/css/base.css?v=1.0.0" type="text/css" />
+<link rel="stylesheet" href="asset/backend/css/custom.css?v=1.0.0" type="text/css" />
+<link rel="stylesheet" href="asset/backend/css/hahaha.css?v=1.0.0" type="text/css" />
+        <script type="text/javascript" src="asset/plugin//jquery/dist/jquery.js?v=1.0.0"></script>
+<script type="text/javascript" src="asset/plugin//bootstrap/dist/js/bootstrap.bundle.js?v=1.0.0"></script>
+<script type="text/javascript" src="asset/plugin//sweetalert2/dist/sweetalert2.js?v=1.0.0"></script>
+<script type="text/javascript" src="asset/plugin//datatables.net/js/jquery.dataTables.min.js?v=1.0.0"></script>
+<script type="text/javascript" src="asset/plugin//datatables.net-bs5/js/dataTables.bootstrap5.min.js?v=1.0.0"></script>
+<script type="text/javascript" src="asset/plugin//datatables.net-responsive/js/dataTables.responsive.min.js?v=1.0.0"></script>
+<script type="text/javascript" src="asset/plugin//datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js?v=1.0.0"></script>
         
     </head>
     <body class="bg-dark text-light">
@@ -36,7 +36,7 @@
     <div class="container-fluid">
 
         <!-- LOGO + 標題 -->
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="/backend">
             <img src="/image/iTW_icon.png" alt="Logo"
                  class="me-2" style="height:32px; width:auto;">
             <span class="fw-semibold">後台管理系統</span>
@@ -55,12 +55,17 @@
 
                 <!-- <li class="nav-item">
                     <a class="nav-link active" href="#">Dashboard</a>
+                </li> -->
+
+                <li class="nav-item nav-sep-left">
+                    <a class="nav-link" href="/">首頁</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">訂單管理</a>
+                    <a class="nav-link" href="/system">系統</a>
                 </li>
 
+                <!--
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                         會員管理
@@ -215,12 +220,159 @@
 
                         </div>
                     </div>
-                    <select id="category" class="form-control bg-dark text-light border-secondary list" style="overflow-y: auto;" size="10" multiple>
+                    <div class="open-select-container">
+
+                        <div class="open-select-options" id="openList">
+                            
+                            <div class="open-select-option row"
+                                data-value="hahaha"
+                                data-name="hahaha"
+                                data-state="無"
+                                data-color="#c9c9ff">
+
+                                <div class="col-6">hahaha</div>
+                                <div class="col-1">|</div>
+                                <div class="col-5" style="color:#c9c9ff;">hahaha</div>
+                            </div>
+                            <div class="open-select-option row"
+                                data-value="hahaha"
+                                data-name="hahaha"
+                                data-state="無"
+                                data-color="#c9c9ff">
+
+                                <div class="col-6">hehehe</div>
+                                <div class="col-1">|</div>
+                                <div class="col-5" style="color:#c9c9ff;">hehehe</div>
+                            </div>
+                            <div class="open-select-option row"
+                                data-value="hahaha"
+                                data-name="hahaha"
+                                data-state="無"
+                                data-color="#c9c9ff">
+
+                                <div class="col-6">hohoho</div>
+                                <div class="col-1">|</div>
+                                <div class="col-5" style="color:#c9c9ff;">hohoho</div>
+                            </div>
+                            <div class="open-select-option row"
+                                data-value="hahaha"
+                                data-name="hahaha"
+                                data-state="無"
+                                data-color="#c9c9ff">
+
+                                <div class="col-6">hihihi</div>
+                                <div class="col-1">|</div>
+                                <div class="col-5" style="color:#c9c9ff;">hihihi</div>
+                            </div>
+                            <div class="open-select-option row"
+                                data-value="hahaha"
+                                data-name="hahaha"
+                                data-state="無"
+                                data-color="#c9c9ff">
+
+                                <div class="col-6">huhuhu</div>
+                                <div class="col-1">|</div>
+                                <div class="col-5" style="color:#c9c9ff;">huhuhu</div>
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="openSelectValue">
+                    </div>
+
+                    <style>
+                        .open-select-container {
+                            width: 100%;
+                            color: #fff;
+                            font-size: 15px;
+                        }
+
+                        .open-select-title {
+                            padding: 12px;
+                            background: #222;
+                            border: 1px solid #444;
+                            border-radius: 6px;
+                            margin-bottom: 6px;
+                        }
+
+                        .open-select-options {
+                            background: #222;
+                            border: 1px solid #444;
+                            border-radius: 6px;
+
+                            /* ⭐ 你的需求：固定高度 + 捲軸 */
+                            max-height: 220px;
+                            overflow-y: auto;
+                            /* ⭐ 修正水平捲軸 BUG */
+                            min-width: 0;
+
+                            /* 美化捲軸 */
+                            scrollbar-width: thin;
+                            scrollbar-color: #666 #222;
+                        }
+
+                        .open-select-option {
+                            padding: 10px 12px;
+                            border-bottom: 1px solid #333;
+                            cursor: pointer;
+                        }
+
+                        .open-select-option.row {
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                        }
+
+                        .open-select-option:hover {
+                            background: #333;
+                        }
+
+                        /* ⭐選取高亮 */
+                        .open-select-option.selected {
+                            background: #555;
+                            border-left: 4px solid #00ff95;
+                        }
+
+                        .open-select-option:last-child {
+                            border-bottom: none;
+                        }
+
+                        .opt-line1 {
+                            font-size: 15px;
+                            font-weight: 500;
+                        }
+
+                        .opt-line2 {
+                            margin-top: 2px;
+                            font-size: 14px;
+                        }
+
+
+
+                    </style>
+                    <script>
+                        $(".open-select-option").on("click", function () {
+
+                            $(".open-select-option").removeClass("selected");
+                            $(this).addClass("selected");
+
+                            let name = $(this).data("name");
+                            let state = $(this).data("state");
+                            let color = $(this).data("color");
+
+                            $("#selectedText").html(
+                                name + "<br><span style='color:"+color+"'>："+state+"</span>"
+                            );
+
+                            $("#openSelectValue").val($(this).data("value"));
+
+                            $(".name").val($(this).data("value"));
+                        });
+                    </script>
+                    <!-- <select id="category" class="form-control bg-dark text-light border-secondary list" style="overflow-y: auto;" size="10" multiple>
                         <option value="hahaha">hahaha</option>
                         <option value="hehehe">hehehe</option>
                         <option value="hohoho">hohoho</option>
 
-                    </select>
+                    </select> -->
                     <div class="row ms-1 mt-3">
                         <button class="btn btn-success col-2 me-1 button_add">
                             <i class="fa-solid fa-circle-plus me-1"></i> 新增
@@ -302,15 +454,16 @@ hohoho 備份
         </div>
     </div>   
 
-        <footer class="bg-dark text-light py-3 fixed-bottom">
+        <footer class="bg-dark text-light py-3 fixed-bottom hahaha-footer">
     <div class="container d-flex justify-content-between align-items-center">
         <span>© 2025 hahaha Company</span>
 
         <div>
-            <a href="#" class="text-light me-3 text-decoration-none">隱私權</a>
-            <a href="#" class="text-light me-3 text-decoration-none">使用條款</a>
+            <a href="#">隱私權政策</a>
+            <span class="mx-2">|</span>
+            <a href="#">使用條款</a>
 
-            <a href="#" class="text-light me-2">
+            <!-- <a href="#" class="text-light me-2">
                 <i class="fa-brands fa-facebook fs-5"></i>
             </a>
             <a href="#" class="text-light me-2">
@@ -318,7 +471,7 @@ hohoho 備份
             </a>
             <a href="#" class="text-light">
                 <i class="fa-brands fa-youtube fs-5"></i>
-            </a>
+            </a> -->
         </div>
     </div>
 </footer>
@@ -326,8 +479,8 @@ hohoho 備份
 
         
         
-        <script type="text/javascript" src="/asset/backend/js/base.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/backend/js/custom.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/backend/js/hahaha.js?v=1.0.0"></script>
+        <script type="text/javascript" src="asset/backend/js/base.js?v=1.0.0"></script>
+<script type="text/javascript" src="asset/backend/js/custom.js?v=1.0.0"></script>
+<script type="text/javascript" src="asset/backend/js/hahaha.js?v=1.0.0"></script>
     </body>
 </html>

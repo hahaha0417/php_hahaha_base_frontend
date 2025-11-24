@@ -11,6 +11,7 @@ class Index_Controller extends \hahaha\base_ontroller
         $parameter->page = new \StdClass;
         $parameter->page->title = "hahaha官網 - 後台 - Table - Base";
 
+        $parameter->is_static = true;
         $file_name = public_path("../../../public/app/[後端]_Table.html"); // 存到 public
         $view = view('backend.table.base', [
             'parameter' => $parameter,
@@ -18,7 +19,11 @@ class Index_Controller extends \hahaha\base_ontroller
 
         $this->hahaha($view, $file_name);
 
-        
+        $parameter->is_static = false;
+        $file_name = public_path("../../../public/app/[後端]_Table.html"); // 存到 public
+        $view = view('backend.table.base', [
+            'parameter' => $parameter,
+        ])->render(); 
 
         return $view;
     }
@@ -30,6 +35,7 @@ class Index_Controller extends \hahaha\base_ontroller
         $parameter->page = new \StdClass;
         $parameter->page->title = "hahaha官網 - 後台 - Table - Base - 編輯";
 
+        $parameter->is_static = true;
         $file_name = public_path("../../../public/app/[後端]_Table_編輯.html"); // 存到 public
         $view = view('backend.table.edit', [
             'parameter' => $parameter,
@@ -37,7 +43,11 @@ class Index_Controller extends \hahaha\base_ontroller
 
         $this->hahaha($view, $file_name);
 
-        
+        $parameter->is_static = false;
+        $file_name = public_path("../../../public/app/[後端]_Table_編輯.html"); // 存到 public
+        $view = view('backend.table.edit', [
+            'parameter' => $parameter,
+        ])->render(); 
 
         return $view;
     }
@@ -52,6 +62,7 @@ class Index_Controller extends \hahaha\base_ontroller
         $parameter->page = new \StdClass;
         $parameter->page->title = "hahaha官網 - 後台 - Table - Modal";
 
+        $parameter->is_static = true;
         $file_name = public_path("../../../public/app/[後端]_Table_Modal.html"); // 存到 public
         $view = view('backend.table.modal', [
             'parameter' => $parameter,
@@ -59,7 +70,11 @@ class Index_Controller extends \hahaha\base_ontroller
 
         $this->hahaha($view, $file_name);
 
-        
+        $parameter->is_static = false;
+        $file_name = public_path("../../../public/app/[後端]_Table_Modal.html"); // 存到 public
+        $view = view('backend.table.modal', [
+            'parameter' => $parameter,
+        ])->render(); 
 
         return $view;
     }

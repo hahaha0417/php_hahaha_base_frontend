@@ -11,6 +11,7 @@ class Index_Controller extends \hahaha\base_ontroller
         $parameter->page = new \StdClass;
         $parameter->page->title = "hahaha官網";
 
+        $parameter->is_static = true;
         $file_name = public_path("../../../public/app/[前端]_首頁.html"); // 存到 public
         $view = view('frontend.index.index', [
             'parameter' => $parameter,
@@ -18,7 +19,11 @@ class Index_Controller extends \hahaha\base_ontroller
 
         $this->hahaha($view, $file_name);
 
-        
+        $parameter->is_static = false;
+        $file_name = public_path("../../../public/app/[前端]_首頁.html"); // 存到 public
+        $view = view('frontend.index.index', [
+            'parameter' => $parameter,
+        ])->render(); 
 
         return $view;
     }
@@ -30,6 +35,7 @@ class Index_Controller extends \hahaha\base_ontroller
         $parameter->page = new \StdClass;
         $parameter->page->title = "hahaha官網";
 
+        $parameter->is_static = true;
         $file_name = public_path("../../../public/app/[前端]_登入.html"); // 存到 public
         $view = view('frontend.index.login', [
             'parameter' => $parameter,
@@ -37,7 +43,11 @@ class Index_Controller extends \hahaha\base_ontroller
 
         $this->hahaha($view, $file_name);
 
-        
+        $parameter->is_static = false;
+        $file_name = public_path("../../../public/app/[前端]_登入.html"); // 存到 public
+        $view = view('frontend.index.login', [
+            'parameter' => $parameter,
+        ])->render(); 
 
         return $view;
     }
@@ -49,6 +59,7 @@ class Index_Controller extends \hahaha\base_ontroller
         $parameter->page = new \StdClass;
         $parameter->page->title = "hahaha官網";
 
+        $parameter->is_static = true;
         $file_name = public_path("../../../public/app/[前端]_關於哈哥.html"); // 存到 public
         $view = view('frontend.index.about', [
             'parameter' => $parameter,
@@ -56,7 +67,11 @@ class Index_Controller extends \hahaha\base_ontroller
 
         $this->hahaha($view, $file_name);
 
-        
+        $parameter->is_static = false;
+        $file_name = public_path("../../../public/app/[前端]_關於哈哥.html"); // 存到 public
+        $view = view('frontend.index.about', [
+            'parameter' => $parameter,
+        ])->render(); 
 
         return $view;
     }
@@ -68,6 +83,7 @@ class Index_Controller extends \hahaha\base_ontroller
         $parameter->page = new \StdClass;
         $parameter->page->title = "hahaha官網";
 
+        $parameter->is_static = true;
         $file_name = public_path("../../../public/app/[前端]_聯絡.html"); // 存到 public
         $view = view('frontend.index.contact', [
             'parameter' => $parameter,
@@ -75,7 +91,11 @@ class Index_Controller extends \hahaha\base_ontroller
 
         $this->hahaha($view, $file_name);
 
-        
+        $parameter->is_static = false;
+        $file_name = public_path("../../../public/app/[前端]_聯絡.html"); // 存到 public
+        $view = view('frontend.index.contact', [
+            'parameter' => $parameter,
+        ])->render(); 
 
         return $view;
     }

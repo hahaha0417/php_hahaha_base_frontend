@@ -19,12 +19,12 @@ class base_ontroller
         // render.com不能寫入
         // 存成檔案
         
-        // $dir = dirname($file_name);
+        $dir = dirname($file_name);
 
-        // if (!is_dir($dir)) {
-        //     mkdir($dir, 0777, true);
-        // }
+        if (!is_dir($dir)) {
+            mkdir($dir, 0777, true);
+        }
 
-        // File::put($file_name, $view);
+        File::put($file_name, $view);
     }
 }

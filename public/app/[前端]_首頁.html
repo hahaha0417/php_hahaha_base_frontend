@@ -3,22 +3,24 @@
     <head>
         
 
-                <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+                            <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+            
+                
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>hahaha官網</title>
-        <meta name="_token" content="BK2Jm3Do8wqNxjLshqnwFgBstr40ENGCePsOTQwI" />
+        <meta name="_token" content="xwSwzQhyPSVUqZe2AUknp8YbT1ACA1MHrZVfAtaV" />
 
-        <link rel="stylesheet" href="/asset/plugin/bootstrap/dist/css/bootstrap.css?v=1.0.0" type="text/css" />
-<link rel="stylesheet" href="/asset/plugin/sweetalert2/dist/sweetalert2.css?v=1.0.0" type="text/css" />
+        <link rel="stylesheet" href="asset/plugin/bootstrap/dist/css/bootstrap.css?v=1.0.0" type="text/css" />
+<link rel="stylesheet" href="asset/plugin/sweetalert2/dist/sweetalert2.css?v=1.0.0" type="text/css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<link rel="stylesheet" href="/asset/frontend/css/base.css?v=1.0.0" type="text/css" />
-<link rel="stylesheet" href="/asset/frontend/css/custom.css?v=1.0.0" type="text/css" />
-<link rel="stylesheet" href="/asset/frontend/css/hahaha.css?v=1.0.0" type="text/css" />
-        <script type="text/javascript" src="/asset/plugin/jquery/dist/jquery.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/plugin/bootstrap/dist/js/bootstrap.bundle.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/plugin/sweetalert2/dist/sweetalert2.js?v=1.0.0"></script>
+<link rel="stylesheet" href="asset/frontend/css/base.css?v=1.0.0" type="text/css" />
+<link rel="stylesheet" href="asset/frontend/css/custom.css?v=1.0.0" type="text/css" />
+<link rel="stylesheet" href="asset/frontend/css/hahaha.css?v=1.0.0" type="text/css" />
+        <script type="text/javascript" src="asset/plugin/jquery/dist/jquery.js?v=1.0.0"></script>
+<script type="text/javascript" src="asset/plugin/bootstrap/dist/js/bootstrap.bundle.js?v=1.0.0"></script>
+<script type="text/javascript" src="asset/plugin/sweetalert2/dist/sweetalert2.js?v=1.0.0"></script>
     </head>
     <body class="bg-dark text-light">
         <!-- hahaha FULL HEADER -->
@@ -94,12 +96,16 @@
                         <a class="nav-link" href="/about">關於哈哥</a>
                     </li>
 
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="/contact">聯絡方式</a>
+                    </li>
+
                     <!--  -->
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="https://www.hahaha.com.tw/support/">Support</a>
                     </li> -->
 
-                    <li class="nav-item">
+                    <li class="nav-item nav-sep-left">
                         <a class="nav-link" href="/backend">後台</a>
                     </li>
 
@@ -112,6 +118,7 @@
                 <!-- ⭐ 右邊登入按鈕（用 ms-auto 推到右側） -->
                 <div class="ms-auto d-flex align-items-center">
                     <a class="nav-link" href="/login">登入</a>
+                    
                 </div>
 
         
@@ -187,6 +194,60 @@
         
         <!-- Hero -->
             <style>
+    * { box-sizing: border-box; }
+    body { font-family: sans-serif; margin: 0; }
+
+    .carousel {
+        position: relative;
+        width: 600px;
+        height: 350px;
+        margin: 30px auto;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+    }
+
+    .slide {
+        min-width: 100%;
+        transition: opacity 0.5s;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+
+    .nav button {
+        background-color: rgba(0,0,0,0.5);
+        border: none;
+        color: #fff;
+        font-size: 2em;
+        padding: 5px 15px;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+
+    .nav button:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+    </style>
+    <style>
         .header-wrap {
             position: relative;     /* 讓子元素可以使用絕對定位 */
             width: 100%;
@@ -438,7 +499,7 @@
     <div class="row text-center">
         <div class="col-4">
             <div class="counter-box p-4">
-                <div class="display-5 fw-bold counter" data-num="99">0</div>
+                <div class="display-5 fw-bold counter" data-num="15">0</div>
                 <p class="mb-0">hahaha</p>
             </div>
 
@@ -447,7 +508,7 @@
 
         <div class="col-4">
             <div class="counter-box p-4">
-                <div class="display-5 fw-bold counter" data-num="99">0</div>
+                <div class="display-5 fw-bold counter" data-num="38">0</div>
                 <p class="mb-0">hehehe</p>
             </div>
 
@@ -456,7 +517,7 @@
 
         <div class="col-4">
             <div class="counter-box p-4">
-                <div class="display-5 fw-bold counter" data-num="99">0</div>
+                <div class="display-5 fw-bold counter" data-num="976">0</div>
                 <p class="mb-0">hohoho</p>
             </div>
 
@@ -581,65 +642,45 @@
 
 
 
-        
+        <div id="backToTop">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none"
+                stroke="#c9ffc9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+
+                <!-- 最上層：位置最高 -->
+                <path d="M6 8 L12 2 L18 8" />
+
+                <!-- 中層：往下拉 8px -->
+                <path d="M6 15 L12 9 L18 15" />
+
+                <!-- 最下層：再往下 8px -->
+                <path d="M6 22 L12 16 L18 22" />
+
+            </svg>
+        </div>
     </main>
 
+    <script>
+        const backToTop = document.getElementById('backToTop');
+
+        // 顯示/隱藏按鈕
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        // 點擊 → 捲動到最上方
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
     
-
-    <style>
-    * { box-sizing: border-box; }
-    body { font-family: sans-serif; margin: 0; }
-
-    .carousel {
-        position: relative;
-        width: 600px;
-        height: 350px;
-        margin: 30px auto;
-        overflow: hidden;
-        border-radius: 12px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-    .slides {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-        width: 100%;
-    }
-
-    .slide {
-        min-width: 100%;
-        transition: opacity 0.5s;
-    }
-
-    .slide img {
-        width: 100%;
-        height: 350px;
-        object-fit: cover;
-    }
-
-    .nav {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transform: translateY(-50%);
-    }
-
-    .nav button {
-        background-color: rgba(0,0,0,0.5);
-        border: none;
-        color: #fff;
-        font-size: 2em;
-        padding: 5px 15px;
-        cursor: pointer;
-        border-radius: 6px;
-    }
-
-    .nav button:hover {
-        background-color: rgba(0,0,0,0.8);
-    }
-    </style>
 
         <footer class="hahaha-footer bg-[#111] text-gray-300 pt-10 pb-6">
     <div class="container">
@@ -707,7 +748,7 @@
         <hr class="border-gray-700 my-4" />
 
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-gray-400 text-sm">
-            <div>© 2025 hahaha. All Rights Reserved.</div>
+            <div>© 2025 hahaha Company</div>
             <div class="footer-links mt-2 mt-md-0">
                 <a href="#">隱私權政策</a>
                 <span class="mx-2">|</span>
@@ -722,8 +763,8 @@
 
         
         
-        <script type="text/javascript" src="/asset/frontend/js/base.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/frontend/js/custom.js?v=1.0.0"></script>
-<script type="text/javascript" src="/asset/frontend/js/hahaha.js?v=1.0.0"></script>
+        <script type="text/javascript" src="asset/frontend/js/base.js?v=1.0.0"></script>
+<script type="text/javascript" src="asset/frontend/js/custom.js?v=1.0.0"></script>
+<script type="text/javascript" src="asset/frontend/js/hahaha.js?v=1.0.0"></script>
     </body>
 </html>

@@ -122,8 +122,8 @@
         
         
         <!-- Hero -->
-        <div class="layout mb-5">
-    <!-- 🔻 左側 Sidebar -->
+            <div class="layout">
+        <!-- 🔻 左側 Sidebar -->
 <div id="sidebar">
     <!-- ⭐ Sidebar Toggle -->
     <a class="nav-link" id="sidebarToggle">
@@ -151,95 +151,10 @@
 </div>
 
 
-        
-    <div class="content">
-        <h3 class="mb-4">其他</h3>
 
-        <form class="p-4 bg-secondary rounded-3 form_main">
-
-            <input type="hidden" id="id">
-            <h3 class="mb-3">備註：首頁跳動數字</h3>
-            <div class="row mb-3">
-                <div class="col-4">
-                    <label class="form-label">代號</label>
-                    <input type="text" name="count_code_name" class="form-control" value="15" required>
-                </div>
-                <div class="col-4">
-                    <label class="form-label">工作</label>
-                    <input type="text" name=count_work class="form-control" value="38" required>
-                </div>
-                <div class="col-4">
-                    <label class="form-label">附加</label>
-                    <input type="text" name="count_additional" class="form-control" value="976" required>
-                </div>
-            </div>
-            
-
-            <div class="d-flex justify-content-between mt-4">
-                <a href="/system" class=""></a>
-                <button type="submit" class="btn btn-success button_update">更新</button>
-            </div>
-
-        </form>
+        <div class="content">
+        </div>
     </div>
-    
-</div>
-
-<script>
-$(".form_main").submit(function() {
-    const form_data = new FormData(this);
-
-    // 轉成物件
-    const obj = {};
-    form_data.forEach((value, key) => obj[key] = value);
-
-    $.ajax({
-        type: "POST", //傳送方式
-        url: "/system/env/hahaha/other/update", //傳送目的地
-        processData: false,      // FormData 必須 false
-        contentType: false,      // FormData 必須 false
-        dataType: "json", //資料格式
-        headers: {
-            "X-CSRF-TOKEN": $('meta[name="_token"]').attr("content"),
-        },
-        data: form_data,
-        success: function(data) {
-            if (data["result"] == "success")
-            { //如果後端回傳 json 資料有 nickname
-                Swal.fire({
-                    title: "成功",
-                    text: data["message"],
-                    icon: "success",
-                }).then(() => {
-                    // console.log("使用者按下 OK");
-                });
-                
-            }
-            else
-            { //否則讀取後端回傳 json 資料 errorMsg 顯示錯誤訊息
-                Swal.fire({
-                    title: "錯誤",
-                    text: data["message"],
-                    icon: "error",
-                }).then(() => {
-                    // console.log("使用者按下 OK");
-                });
-            }
-        },
-        error: function(jqXHR) {
-            Swal.fire({
-                title: "錯誤",
-                text: "出錯!",
-                icon: "error",
-            }).then(() => {
-                // console.log("使用者按下 OK");
-            });
-        }
-    });
-
-    return false;
-});
-</script>
 
         <footer class="bg-dark text-light py-3 fixed-bottom hahaha-footer">
     <div class="container d-flex justify-content-between align-items-center">

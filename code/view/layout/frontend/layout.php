@@ -74,7 +74,13 @@ class layout
         $parameter = \hahaha\parameter::Instance();
         $hahaha_function_base = hahaha_function_base::Instance();
 ?>
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <?php if($parameter->is_static) { ?>
+            <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+            
+        <?php } else { ?>
+            <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <?php } ?>
+        
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title><?php echo $parameter->page->title; ?></title>
@@ -85,10 +91,14 @@ class layout
     // css
     public function view_css()
     {
+        $parameter = \hahaha\parameter::Instance();
         $hahaha_function_base = hahaha_function_base::Instance();
 
         echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('bootstrap/dist/css/bootstrap.css'));
         echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('sweetalert2/dist/sweetalert2.css'));
+            
+  
+        
 
         // echo $hahaha_function_base->Css($hahaha_function_base->Url_Plugin('font-awesome/css/font-awesome.css'));
 ?>

@@ -45,16 +45,32 @@ class function_base
 	*/
 	public function Url_Asset($asset)
 	{
+		$parameter = \hahaha\parameter::Instance();
 		$config_application = config_application::Instance();
 		
-		if($config_application->debug) 
+		if(!empty($parameter->is_static))
 		{
-			return "/asset" . "/" . $asset . "?t=" . $config_application->time;
-		} 
-		else 
-		{
-			return "/asset" . "/" . $asset . "?v=" . $config_application->version;
+			if($config_application->debug) 
+			{
+				return "asset" . "/" . $asset . "?t=" . $config_application->time;
+			} 
+			else 
+			{
+				return "asset" . "/" . $asset . "?v=" . $config_application->version;
+			}
 		}
+		else
+		{
+			if($config_application->debug) 
+			{
+				return "/asset" . "/" . $asset . "?t=" . $config_application->time;
+			} 
+			else 
+			{
+				return "/asset" . "/" . $asset . "?v=" . $config_application->version;
+			}
+		}
+		
 	}
 
 	/*
@@ -62,16 +78,32 @@ class function_base
 	*/
 	public function Url_Image($image)
 	{
+		$parameter = \hahaha\parameter::Instance();
 		$config_application = config_application::Instance();
 		
-		if($config_application->debug) 
+		if(!empty($parameter->is_static))
 		{
-			return "/image" . "/" . $image . "?t=" . $config_application->time;
-		} 
-		else 
-		{
-			return "/image" . "/" . $image . "?v=" . $config_application->version;
+			if($config_application->debug) 
+			{
+				return "image" . "/" . $image . "?t=" . $config_application->time;
+			} 
+			else 
+			{
+				return "image" . "/" . $image . "?v=" . $config_application->version;
+			}
 		}
+		else
+		{
+			if($config_application->debug) 
+			{
+				return "/image" . "/" . $image . "?t=" . $config_application->time;
+			} 
+			else 
+			{
+				return "/image" . "/" . $image . "?v=" . $config_application->version;
+			}
+		}
+		
 	}
 
 	/*
@@ -79,16 +111,32 @@ class function_base
 	*/
 	public function Url_File($file)
 	{
+		$parameter = \hahaha\parameter::Instance();
 		$config_application = config_application::Instance();
 		
-		if($config_application->debug) 
+		if(!empty($parameter->is_static))
 		{
-			return "/file" . "/" . $file . "?t=" . $config_application->time;
-		} 
-		else 
-		{
-			return "/file" . "/" . $file . "?v=" . $config_application->version;
+			if($config_application->debug) 
+			{
+				return "file" . "/" . $file . "?t=" . $config_application->time;
+			} 
+			else 
+			{
+				return "file" . "/" . $file . "?v=" . $config_application->version;
+			}
 		}
+		else
+		{
+			if($config_application->debug) 
+			{
+				return "/file" . "/" . $file . "?t=" . $config_application->time;
+			} 
+			else 
+			{
+				return "/file" . "/" . $file . "?v=" . $config_application->version;
+			}
+		}
+		
 	}
 
 	/*
@@ -96,16 +144,32 @@ class function_base
 	*/
 	public function Url_Js($js)
 	{
+		$parameter = \hahaha\parameter::Instance();
 		$config_application = config_application::Instance();
 		
-		if($config_application->debug) 
+		if(!empty($parameter->is_static))
 		{
-			return "/asset/js" . "/" . $js . "?t=" . $config_application->time;
-		} 
-		else 
-		{
-			return "/asset/js" . "/" . $js . "?v=" . $config_application->version;
+			if($config_application->debug) 
+			{
+				return "asset/js" . "/" . $js . "?t=" . $config_application->time;
+			} 
+			else 
+			{
+				return "asset/js" . "/" . $js . "?v=" . $config_application->version;
+			}
 		}
+		else
+		{
+			if($config_application->debug) 
+			{
+				return "/asset/js" . "/" . $js . "?t=" . $config_application->time;
+			} 
+			else 
+			{
+				return "/asset/js" . "/" . $js . "?v=" . $config_application->version;
+			}
+		}
+		
 	}
 
 	/*
@@ -113,16 +177,32 @@ class function_base
 	*/
 	public function Url_Css($css)
 	{
+		$parameter = \hahaha\parameter::Instance();
 		$config_application = config_application::Instance();
 		
-		if($config_application->debug) 
+		if(!empty($parameter->is_static))
 		{
-			return "/asset/css" . "/" . $css . "?t=" . $config_application->time;
-		} 
-		else 
-		{
-			return "/asset/css" . "/" . $css . "?v=" . $config_application->version;
+			if($config_application->debug) 
+			{
+				return "asset/css" . "/" . $css . "?t=" . $config_application->time;
+			} 
+			else 
+			{
+				return "asset/css" . "/" . $css . "?v=" . $config_application->version;
+			}
 		}
+		else
+		{
+			if($config_application->debug) 
+			{
+				return "/asset/css" . "/" . $css . "?t=" . $config_application->time;
+			} 
+			else 
+			{
+				return "/asset/css" . "/" . $css . "?v=" . $config_application->version;
+			}
+		}
+		
 	}
 
 	/*
@@ -130,15 +210,31 @@ class function_base
 	*/
 	public function Url_Plugin($plugin)
 	{
+		$parameter = \hahaha\parameter::Instance();
 		$config_application = config_application::Instance();
 		
-		if($config_application->debug) 
+		if(!empty($parameter->is_static))
 		{
-			return "/asset/plugin" . "/" . $plugin . "?t=" . $config_application->time;
-		} 
-		else 
-		{
-			return "/asset/plugin" . "/" . $plugin . "?v=" . $config_application->version;
+			if($config_application->debug) 
+			{
+				return "asset/plugin" . "/" . $plugin . "?t=" . $config_application->time;
+			} 
+			else 
+			{
+				return "asset/plugin" . "/" . $plugin . "?v=" . $config_application->version;
+			}
 		}
+		else
+		{
+			if($config_application->debug) 
+			{
+				return "/asset/plugin" . "/" . $plugin . "?t=" . $config_application->time;
+			} 
+			else 
+			{
+				return "/asset/plugin" . "/" . $plugin . "?v=" . $config_application->version;
+			}
+		}
+		
 	}
 }
